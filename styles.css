@@ -3,11 +3,15 @@ body {
 }
 
 div {
-	text-align: center;
 	color: #f53663;
-	font-size: 50px;
+	font-size: 90px;
+	font-size: 5.9vw;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 100%;
+	transform: translate(-50%, -50%);
+}
+
+path {
+    fill: #f53663 !important;
 }
