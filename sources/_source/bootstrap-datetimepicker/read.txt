@@ -1,0 +1,16 @@
+$(function () {
+    $('#datetimepicker1, #datetimepicker1 input[name=birthday]').datetimepicker({
+        locale: 'vi',
+        format: 'DD-MM-YYYY',
+    });
+
+    /*4/9/2017*/
+    $("#reset-input").click(function(){
+        location.reload();
+    });
+});
+
+<div class='date form-group' id='datetimepicker1'>
+	<label for="birthday" class="control-label">Ngày sinh</label>
+    <input type='text' class="form-control" name="birthday" required=""  value="{{ old('birthday') }}" />
+</div>

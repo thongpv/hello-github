@@ -1,0 +1,10 @@
+function countDownTime(day_) {
+  // 2017/02/30
+  $('#count-down-time').countdown(day_, function(event) {
+    $('#day').html(event.strftime('%D'));
+    $('#hours').html(event.strftime('%H'));
+    $('#minutes').html(event.strftime('%M'));
+    $('#seconds').html(event.strftime('%S'));
+
+  }); 
+}

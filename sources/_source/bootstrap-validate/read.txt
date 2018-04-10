@@ -1,0 +1,112 @@
+<div class="col-md-12">
+    <div class="form-group">
+        <label class="col-xs-5 control-label" id="captchaOperation" style=""></label>
+        
+        <div class="col-xs-5">
+            <input type="text" class="form-control" name="captcha" />
+        </div>
+    </div>
+</div>
+
+$(document).ready(function() {
+    // Generate a simple captcha
+    function randomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    function generateCaptcha() {
+        $('#captchaOperation').html([randomNumber(1, 100), '+', randomNumber(1, 200), '='].join(' '));
+    }
+    generateCaptcha();
+});
+
+$(function () {
+    $('#datetimepicker1, #datetimepicker1 input[name=birthday]').datetimepicker({
+        locale: 'vi',
+        format: 'DD-MM-YYYY',
+    });
+
+    /*4/9/2017*/
+    $("#reset-input").click(function(){
+        location.reload();
+    });
+});
+
+$('#frm-register').bootstrapValidator({
+    // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+    feedbackIcons: {
+        valid: 'glyphicon glyphicon-ok',
+        invalid: 'glyphicon glyphicon-remove',
+        validating: 'glyphicon glyphicon-refresh'
+    },
+    fields: {
+        'name': {
+            validators: {
+                notEmpty: {
+                    message: 'Bạn chưa nhập họ tên'
+                }
+            }
+        },
+        'birthday': {
+            validators: {
+                notEmpty: {
+                    message: 'Nhập 1 ký tự bất kì'
+                }
+            }
+        },
+        'email': {
+            validators: {
+                notEmpty: {
+                    message: 'Bạn chưa nhập email'
+                },
+                emailAddress: {
+                     message: 'ex: email@gmail.com'
+                }
+            }
+        },
+        'password': {
+            validators: {
+                notEmpty: {
+                    message: 'Bạn chưa nhập mật khẩu'
+                },
+                identical: {
+                    field: 'password_confirmation',
+                    message: 'Không trùng với mật khẩu xác nhận'
+                }
+            }
+        },
+        password_confirmation: {
+            validators: {
+                notEmpty: {
+                    message: 'Bạn chưa nhập mật khẩu xác nhận'
+                },
+                identical: {
+                    field: 'password',
+                    message: 'Không trùng với mật khẩu vừa nhập'
+                }
+            }
+        },
+        captcha: {
+            validators: {
+                callback: {
+                    message: 'Câu trả lời không đúng',
+                    callback: function(value, validator, $field) {
+                        var items = $('#captchaOperation').html().split(' '),
+                            sum   = parseInt(items[0]) + parseInt(items[2]);
+                        return value == sum;
+                    }
+                }
+            }
+        },
+        last: {
+            validators: {
+                notEmpty: {
+                    message: 'Your last name is required'
+                },
+                regexp: {
+                    regexp: /^[a-zA-Z ]+$/,
+                    message: 'Your last name cannot have numbers or symbols'
+                }
+            }
+        },
+    }
+});

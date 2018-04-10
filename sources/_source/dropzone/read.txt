@@ -1,0 +1,33 @@
+Dropzone.options.myAwesomeDropzone = {
+    paramName: "files",
+    uploadMultiple:true,
+    maxFilesize:3,
+    autoProcessQueue: true,
+    uploadMultiple: true,
+    addRemoveLinks: true,
+    acceptedFiles: ".png, .jpg, .jpeg",
+    dictFallbackMessage:"Trình duyệt này không hỗ trợ upload hình ảnh",
+    dictRemoveFile: "Xóa",
+    dictFileTooBig:"Hình này lớn hơn 6MB",
+
+    accept: function(file, done) {
+        done();
+    },
+
+    init:function() {
+    /*  var submitButton = document.querySelector('#submit-all')
+            myAwesomeDropzone = this;
+
+        submitButton.addEventListener("click", function(
+            myAwesomeDropzone.processQueue();
+        ));
+
+        this.on("addedfile", function(){
+            $('#submit-all').show();
+        });*/
+
+    },  
+    success: function(file,done){
+        // console.log("All files done!");
+    }
+}

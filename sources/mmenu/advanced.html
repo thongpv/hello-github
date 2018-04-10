@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>jQuery.mmenu demo</title>
+
+		<link type="text/css" rel="stylesheet" href="css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.all.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu({
+					extensions				: [ 'effect-slide-menu', 'shadow-page'],
+					keyboardNavigation 		: false,
+					screenReader 			: false,
+					counters				: true,
+					navbar 	:false
+					
+				});
+			});
+		</script>
+	</head>
+	<!-- <body>
+		<div id="page">
+			<a href="#menu" id="hamburger" class="mm-slideout">
+				<span class="hamburger hamburger--collapse is-active">
+					<span class="hamburger-box">
+						<span class="hamburger-inner">a</span>
+					</span>
+				</span>
+			</a>
+			
+			<nav id="menu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><span>About us</span>
+						<ul>
+							<li><a href="#about/history">History</a></li>
+							<li><span>The team</span>
+								<ul>
+									<li><a href="#about/team/management">Management</a></li>
+									<li><a href="#about/team/sales">Sales</a></li>
+									<li><a href="#about/team/development">Development</a></li>
+								</ul>
+							</li>
+							<li><a href="#about/address">Our address</a></li>
+						</ul>
+					</li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="content">
+				<p> Nội dung web trong đây</p>
+			</div>
+	</body> -->
+
+	<body>
+
+		<nav id="menu">
+		   <ul>
+		      <li><a href="/">Home</a></li>
+		      <li><a href="/about/">About us</a>
+		         <ul>
+		            <li><a href="/about/history/">History</a></li>
+		            <li><a href="/about/team/">The team</a></li>
+		            <li><a href="/about/address/">Our address</a></li>
+		         </ul>
+		      </li>
+		      <li><a href="/contact/">Contact</a></li>
+		   </ul>
+		</nav>
+
+		<a href="#menu" id="hamburger" class="mm-slideout">
+			<span class="hamburger hamburger--collapse is-active">
+				<span class="hamburger-box">
+					<span class="hamburger-inner">a</span>
+				</span>
+			</span>
+		</a>
+
+		<div class="mm-page">
+			<div id="my-wrapper">
+				<div id="my-header"></div>
+				<div id="my-content"></div>
+				<div id="my-footer"></div>
+			</div>
+			<div id="lightbox"></div>
+		</div>
+	</body>
+</html>
