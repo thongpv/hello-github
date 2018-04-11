@@ -7079,6 +7079,11 @@ textarea.form-control {
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
+.form-control[type="date"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .input-group--search button {
   height: 40px;
   background-color: #fff;
@@ -7580,6 +7585,10 @@ nav .ali-pagination li a:hover {
   box-shadow: 2px 0 3px #d4d4d4;
 }
 
+.timepicker-picker a {
+  padding: 0 !important;
+}
+
 .ali-title-large {
   color: #242539;
   font-size: 35px;
@@ -7867,6 +7876,10 @@ nav .ali-pagination li a:hover {
   }
 }
 
+.media {
+  overflow: inherit;
+}
+
 .media .badge-verify {
   margin-left: 18px;
   color: #4AD991;
@@ -7878,6 +7891,10 @@ nav .ali-pagination li a:hover {
 
 .media h4 a {
   color: #242539;
+}
+
+.media .media-body {
+  overflow: inherit;
 }
 
 .media .media-body .media-heading.date-time {
