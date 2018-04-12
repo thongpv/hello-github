@@ -97,6 +97,9 @@
     <!-- bootstrap-datetimepicker -->
     <link rel="stylesheet" href="sources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
 
+    <!-- bootstrap-multiselect -->
+    <link rel="stylesheet" href="sources/bootstrap-multiselect/bootstrap-multiselect.css">
+
     <!--[if IE]>
     <link rel="stylesheet" type="text/css" href="css/all-ie-only.css">
     <![endif]-->
@@ -115,26 +118,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row mar-t-20">
             <div class="col-md-12">
-                <!-- List Item -->
-                <div class="panel panel-default mar-15">
-                    <div class="panel-body">
-                        <ol>
-                            <li><a href="#elButton">Button</a></li>
-                            <li>
-                                <a href="#elForm">Form</a>
-                                <ul>
-                                    <li><a href="#elCheckbox">Checkbox</a></li>
-                                    <li><a href="#elRadio">Radio</a></li>
-                                    <li><a href="#elSwitch">Switch</a></li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- END:List Item -->
-
                 <div class="panel panel-default">
                     <div class="panel-heading"># Button</div>
                     <div class="panel-body">
@@ -218,7 +203,7 @@
                                 </label>
 
                                 <label class="wrap-custom-box"> One
-                                    <input name="radio" type="radio" checked="checked">
+                                    <input name="radio" type="radio">
                                     <span class="checkmark-rdb"></span>
                                 </label>
 
@@ -235,6 +220,15 @@
 
                             <div class="col-md-4">
                                 <p class="fw-bold"><br>Switch</p>
+                                <label class="wrap-switch-text">
+                                    <label class="wrap-switch"> 
+                                        <input type="checkbox" class="switch-input" checked="checked">
+                                        <span class="switch-label" data-on="On" data-off="Off"></span> 
+                                        <span class="switch-handle"></span>
+                                    </label>
+                                </label>
+
+                                <br>
                                 <label class="wrap-switch-text">
                                     <label class="wrap-switch"> 
                                         <input type="checkbox" class="switch-input" checked="checked">
@@ -307,7 +301,53 @@
                                     <option value="WY">Lorem ipsum dolor sit amet.</option>
                                 </select>
                             </div>
+
+                            <div class="form-group">
+                                <label for="select">Select 2 + Flag</label>
+                                <select class="select2-flag">
+                                    <option value="">Loading...</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="select">Select 2 + Multi Flag</label> <button id="demoSelectMultiValue">Get value</button>
+                                <select class="select2-flag-multi" multiple>
+                                    <option value="">Loading...</option>
+                                </select>
+                            </div>
+
                             
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="select">Bootstrap Multi Select</label> <button type="button" id="getValueMultiSelect">Get value</button>
+                                        <select id="bstrapSlc_custom" multiple="multiple" class="form-control">
+                                            <option value="cheese">Cheese</option>
+                                            <option value="tomatoes">Tomatoes</option>
+                                            <option value="mozarella">Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="select">Bootstrap Multi Select</label> <button type="button" id="getValueMultiSelect_advance">Get value</button>
+                                        <select id="bstrapSlc_advance" multiple="multiple" class="form-control bootstrap-multi-advance">
+                                            <option value="cheese">Cheese</option>
+                                            <option value="tomatoes">Tomatoes</option>
+                                            <option value="mozarella">Mozzarella</option>
+                                            <option value="mushrooms">Mushrooms</option>
+                                            <option value="pepperoni">Pepperoni</option>
+                                            <option value="onions">Onions</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <label for="textbox">Textbox</label>
                                 <input type="textbox" id="textbox" name="" placeholder="" class="form-control">
@@ -320,7 +360,7 @@
 
                             <div class='form-group'>
                                 <label for="birthday" class="control-label">Boostrap datepicker</label>
-                                <input type='text' class="form-control datetimepicker" name="" required="" value="" />
+                                <input type='text' class="form-control datetimepicker" placeholder="dd / mm / yyyy" name="" required="" value="" />
                             </div>
 
                             <div class="form-group">
@@ -991,7 +1031,7 @@
                                 <p class="fz14 fw-bold mr0">Based on 120 reviews</p>
                                 <div class="media-body_rating mar-b-10">
                                     <div class="media_rating-box d-inline-block text-center">
-                                        <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star fa fa-star fa-3x" data-empty="ali-rating ali-rating--star fa fa-star-o fa-3x" data-fractions="2"/>
+                                        <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star icon-ic-star-24px" data-empty="ali-rating ali-rating--star icon-ic-star-border-24px" data-fractions="2"/>
                                     </div>
                                     <span class="badge-verify icon-ic-verified-user-24px"></span>
                                 </div>
@@ -1036,9 +1076,9 @@
                                 <h4 class="media-left_name fz11 text-center fw-bold mar-0">
                                     <a href="#">Maximus Bernhard</a>
                                 </h4>
-                                <div class="media-left_location p-relative text-center mar-b-5">
-                                    <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                    <span class="fw-bold fz13">AM</span>
+                                <div class="media-left_location p-relative mar-b-5">
+                                    <span class="ali-flag-slc vn"></span>
+                                    <span class="fz13">AM</span>
                                 </div>
                             </div>
 
@@ -1049,13 +1089,13 @@
                                 </h4>
 
                                 <div class="media-left_location p-relative mar-b-5">
-                                    <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                    <span class="fw-bold fz13">AM</span>
+                                    <span class="ali-flag-slc vn"></span>
+                                    <span class="fz13">AM</span>
                                 </div>
 
                                 <div class="media-body_rating mar-b-10">
                                     <div class="media_rating-box d-inline-block text-center">
-                                        <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star fa fa-star fa-3x" data-empty="ali-rating ali-rating--star fa fa-star-o fa-3x" data-fractions="2"/>
+                                        <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star icon-ic-star-24px" data-empty="ali-rating ali-rating--star icon-ic-star-border-24px" data-fractions="2"/>
                                     </div>
                                     <span class="badge-verify icon-ic-verified-user-24px"></span>
                                 </div>
@@ -1096,9 +1136,9 @@
                                 <h4 class="media-left_name fz11 text-center fw-bold mar-0">
                                     <a href="#">Maximus Bernhard</a>
                                 </h4>
-                                <div class="media-left_location p-relative text-center mar-b-5">
-                                    <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                    <span class="fw-bold fz13">AM</span>
+                                <div class="media-left_location p-relative mar-b-5">
+                                    <span class="ali-flag-slc vn"></span>
+                                    <span class="fz13">AM</span>
                                 </div>
                             </div>
 
@@ -1109,13 +1149,13 @@
                                 </h4>
 
                                 <div class="media-left_location p-relative mar-b-5">
-                                    <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                    <span class="fw-bold fz13">AM</span>
+                                    <span class="ali-flag-slc vn"></span>
+                                    <span class="fz13">AM</span>
                                 </div>
 
                                 <div class="media-body_rating mar-b-10">
                                     <div class="media_rating-box d-inline-block text-center">
-                                        <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star fa fa-star fa-3x" data-empty="ali-rating ali-rating--star fa fa-star-o fa-3x" data-fractions="2"/>
+                                        <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star icon-ic-star-24px" data-empty="ali-rating ali-rating--star icon-ic-star-border-24px" data-fractions="2"/>
                                     </div>
                                     <span class="badge-verify icon-ic-verified-user-24px"></span>
                                 </div>
@@ -1150,7 +1190,7 @@
                     
                     <div class="panel-body">
                         <!-- Rating -->
-                        <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star fa fa-star fa-3x" data-empty="ali-rating ali-rating--star fa fa-star-o fa-3x" data-fractions="2"/>
+                        <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star icon-ic-star-24px" data-empty="ali-rating ali-rating--star icon-ic-star-border-24px" data-fractions="2"/>
                         <span>(Base on 110 Reviews)</span>
                         <!-- END: Rating -->
                     </div>
@@ -1295,9 +1335,9 @@
                                                 <a href="#">Maximus Bernhard</a>
                                             </h4>
 
-                                            <div class="media-left_location p-relative">
-                                                <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                                <span class="fz13">Country Name</span>
+                                            <div class="media-left_location p-relative mar-b-5">
+                                                <span class="ali-flag-slc vn"></span>
+                                                <span class="fz13">Country</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1398,113 +1438,9 @@
                                                 <a href="#">Maximus Bernhard</a>
                                             </h4>
 
-                                            <div class="media-left_location p-relative">
-                                                <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                                <span class="fz13">Country Name</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="td-rating"><input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star icon-ic-star-24px" data-empty="ali-rating ali-rating--star icon-ic-star-border-24px" data-fractions="2"/></td>
-                                <td>
-                                    <p class="fz11 text-over-3 mr0 table-note">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis rerum culpa error cumque soluta, qui.</p>
-                                </td>
-                                <td>
-                                    <img src="http://via.placeholder.com/35x35" alt="" class="img-rounded">
-                                    <img src="http://via.placeholder.com/35x35" alt="" class="img-rounded">
-                                    
-                                    <div class="dropdown d-inline-block">
-                                        <button class="btn dropdown-toggle btn-primary fw-bold" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                                            <span>+3</span>
-                                        </button>
-
-                                        <div class="dropdown-menu dropdown-menu--rdb dropdown-menu--top dropdown-menu--right" aria-labelledby="dropdownMenu1">
-                                            <div class="drop-rdb_1">
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-
-                                                <label>
-                                                    <input type="radio" name="rdb">
-                                                    <img src="http://via.placeholder.com/22x22" alt="">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="fz11 text-over-3 mr0 table-note">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fugit saepe pariatur. Suscipit in, minus.</p>
-                                </td>
-                                <td>
-                                    <button class="btn btn-primary fw-bold">Appove</button>
-                                    <button class="btn btn-default btn-hvr-pink">
-                                        <span class="icon-ic-delete-forever-24px"></span>
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="text-center">
-                                    <label class="wrap-custom-box">
-                                        <input type="checkbox" class="row-select">
-                                        <span class="checkmark-ckb"></span>
-                                    </label>
-                                </td>
-                                <td>
-                                    <div class="media">
-                                        <div class="media-left media-middle">
-                                            <img src="http://via.placeholder.com/50x50" class="media-object img-rounded mar-b-5 img-circle" style="width:50px">
-                                        </div>
-
-                                        <div class="media-body">
-                                            <h4 class="media-heading fz14 fw-bold p-realative">
-                                                <a href="#">Maximus Bernhard</a>
-                                            </h4>
-
-                                            <div class="media-left_location p-relative">
-                                                <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                                <span class="fz13">Country Name</span>
+                                            <div class="media-left_location p-relative mar-b-5">
+                                                <span class="ali-flag-slc vn"></span>
+                                                <span class="fz13">Country</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1606,9 +1542,113 @@
                                                 <a href="#">Maximus Bernhard</a>
                                             </h4>
 
-                                            <div class="media-left_location p-relative">
-                                                <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                                <span class="fz13">Country Name</span>
+                                            <div class="media-left_location p-relative mar-b-5">
+                                                <span class="ali-flag-slc vn"></span>
+                                                <span class="fz13">Country</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="td-rating"><input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star icon-ic-star-24px" data-empty="ali-rating ali-rating--star icon-ic-star-border-24px" data-fractions="2"/></td>
+                                <td>
+                                    <p class="fz11 text-over-3 mr0 table-note">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis rerum culpa error cumque soluta, qui.</p>
+                                </td>
+                                <td>
+                                    <img src="http://via.placeholder.com/35x35" alt="" class="img-rounded">
+                                    <img src="http://via.placeholder.com/35x35" alt="" class="img-rounded">
+                                    
+                                    <div class="dropdown d-inline-block">
+                                        <button class="btn dropdown-toggle btn-primary fw-bold" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                            <span>+3</span>
+                                        </button>
+
+                                        <div class="dropdown-menu dropdown-menu--rdb dropdown-menu--top dropdown-menu--right" aria-labelledby="dropdownMenu1">
+                                            <div class="drop-rdb_1">
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb">
+                                                    <img src="http://via.placeholder.com/22x22" alt="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p class="fz11 text-over-3 mr0 table-note">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis fugit saepe pariatur. Suscipit in, minus.</p>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary fw-bold">Appove</button>
+                                    <button class="btn btn-default btn-hvr-pink">
+                                        <span class="icon-ic-delete-forever-24px"></span>
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="text-center">
+                                    <label class="wrap-custom-box">
+                                        <input type="checkbox" class="row-select">
+                                        <span class="checkmark-ckb"></span>
+                                    </label>
+                                </td>
+                                <td>
+                                    <div class="media">
+                                        <div class="media-left media-middle">
+                                            <img src="http://via.placeholder.com/50x50" class="media-object img-rounded mar-b-5 img-circle" style="width:50px">
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h4 class="media-heading fz14 fw-bold p-realative">
+                                                <a href="#">Maximus Bernhard</a>
+                                            </h4>
+
+                                            <div class="media-left_location p-relative mar-b-5">
+                                                <span class="ali-flag-slc vn"></span>
+                                                <span class="fz13">Country</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1718,9 +1758,9 @@
                                                 <a href="#">Maximus Bernhard</a>
                                             </h4>
 
-                                            <div class="media-left_location p-relative">
-                                                <img src="http://via.placeholder.com/20x13" alt="" class="mar-r-10">
-                                                <span class="fz13">Country Name</span>
+                                            <div class="media-left_location p-relative mar-b-5">
+                                                <span class="ali-flag-slc vn"></span>
+                                                <span class="fz13">Country</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1909,7 +1949,7 @@
                                             <li>Manage reviews</li>
                                         </ul>
 
-                                        <div class="text-center" style="margin-top: 50px;">
+                                        <div class="text-center mar-b-15" style="margin-top: 50px;">
                                             <a href="#" class="btn btn-primary fw-bold">YOU ARE HERE</a>
                                         </div>
 
@@ -1933,7 +1973,7 @@
                                             <li>Create review showcase page</li>
                                         </ul>
 
-                                        <div class="text-center" style="margin-top: 50px;">
+                                        <div class="text-center mar-b-15" style="margin-top: 50px;">
                                             <a href="#" class="btn btn-primary fw-bold">FREE TRIAL</a>
                                         </div>
 
@@ -1958,7 +1998,7 @@
                                             <li>Do everything you want!</li>
                                         </ul>
 
-                                        <div class="text-center" style="margin-top: 50px;">
+                                        <div class="text-center mar-b-15" style="margin-top: 50px;">
                                             <a href="#" class="btn btn-primary fw-bold">FREE TRIAL</a>
                                         </div>
 
@@ -2064,6 +2104,9 @@
     <!-- bootstrap-datetimepicker -->
     <script src="sources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 
+    <!-- bootstrap-multiselect -->
+    <script src="sources/bootstrap-multiselect/bootstrap-multiselect.js"></script>
+
     <!-- Chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
     
@@ -2074,12 +2117,70 @@
         });
     </script>
 
+    <!-- Bootstrap Multi Select -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#bstrapSlc_default').multiselect();
+        });
+
+        $(document).ready(function() {
+            $('#bstrapSlc_custom').multiselect({
+                templates: { 
+                    li: '<li class="checkList"><label class="wrap-custom-box"> one<input type="checkbox" checked="checked"><span class="checkmark-ckb"></span></label></li>'
+                }
+                
+            });
+
+            $('#bstrapSlc_custom + div .multiselect-container .wrap-custom-box').each(function(index) {
+                $(this).append('<span class="checkmark-ckb"></span>');
+
+                $(this).click(function(e) {
+                    // Prevents the click from bubbling up and hiding the dropdown
+                    e.stopPropagation();
+                });
+
+            });
+        });
+
+        $(document).ready(function() {
+            $('#bstrapSlc_advance').multiselect({
+                templates: { // Use the Awesome Bootstrap Checkbox structure
+                    li: '<li class="checkList"><label class="wrap-custom-box"> one<input type="checkbox" checked="checked"><span class="checkmark-ckb"></span></label></li>'
+                },
+                enableClickableOptGroups: true,
+                enableCollapsibleOptGroups: true,
+                enableFiltering: true,
+                includeSelectAllOption: true
+            });
+
+            $('#bstrapSlc_advance + div .multiselect-container .wrap-custom-box').each(function(index) {
+                $(this).append('<span class="checkmark-ckb"></span>');
+
+                $(this).click(function(e) {
+                    // Prevents the click from bubbling up and hiding the dropdown
+                    e.stopPropagation();
+                });
+
+            });
+        });
+
+        // demo get value Bootstrap Multi select
+        $('#getValueMultiSelect').on('click', function() {
+            alert($('#bstrapSlc_custom').val());
+        });
+
+        $('#getValueMultiSelect_advance').on('click', function() {
+            alert($('#bstrapSlc_advance').val());
+        });
+        // END: demo get value Bootstrap Multi select
+    </script>
+
     <!-- datetimepicker -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('.datetimepicker').datetimepicker({
                 format: 'YYYY/MM/DD',
-                defaultDate: new Date(),
+                // defaultDate: new Date(),
                 icons: {
                     time: 'icon-ic-access-alarms-24px',
                     date: 'icon-ic-date-range-24px',
@@ -2278,7 +2379,8 @@
             readURL(this);
         });
     </script>
-
+    
+    <!-- Upload photos -->
     <script type="text/javascript">
         $(document).ready(function() {
             upPhotos();
@@ -2380,11 +2482,60 @@
                 }
             }
         });
-        </script>
+    </script>
+
+    <!-- Select 2 + Select 2 - Flag -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if($('.select2').length) $('.select2').select2();
+
+            if($('.select2-flag').length) {
+                getFlagsSelect2('.select2-flag');
+                $('.select2-flag').select2({
+                    placeholder: "What currency do you use?", //placeholder
+                    templateResult: setCurrency,
+                    templateSelection: setCurrency,
+                    maximumSelectionLength: 2
+                });
+            }
+
+            if($('.select2-flag-multi').length) {
+                getFlagsSelect2('.select2-flag-multi');
+                $('.select2-flag-multi').select2({
+                    placeholder: "What currency do you use?", //placeholder
+                    templateResult: setCurrency,
+                    templateSelection: setCurrency
+                });
+            }
+        });
+
+        // Demo select2: chọn dc tất cả, nhưng bỏ chọn chưa xử lý dc
+        // $("#demoCheckAllSelect2").click(function(){
+        //     if( $(this).is(':checked') ){
+        //         $(".select2-flag-multi > option").prop("selected","selected");
+        //         $(".select2-flag-multi").trigger("change");
+        //     } else {
+        //         $(".select2-flag-multi > option").removeAttr("selected");
+        //         $(".select2-flag-multi").trigger("change");
+        //      }
+        // });
+
+        $('#demoSelectMultiValue').on('click', function() {
+            alert($(".select2-flag-multi").val());
+        })
+        // END: Demo select2
+    </script>
 
     <script type="text/javascript">
-        // Select 2 Init
-        $('.select2').select2();
+        $('#exampleModal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // Button that triggered the modal
+          var recipient = button.data('whatever') // Extract info from data-* attributes
+          // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+          // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+          var modal = $(this)
+          modal.find('.modal-title').text('New message to ' + recipient)
+          modal.find('.modal-body input').val(recipient)
+        })
     </script>
 
     <!-- /Microformat -->

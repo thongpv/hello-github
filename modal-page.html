@@ -75,6 +75,9 @@
     <!-- font-ali-awesome -->
     <link rel="stylesheet" href="sources/font-ali-awesome/font-ali-awesome.css">
 
+    <!-- Rating -->
+    <link rel="stylesheet" href="sources/rating/bootstrap-rating.css">
+
 	<!--[if IE]>
 	<link rel="stylesheet" type="text/css" href="css/all-ie-only.css">
 	<![endif]-->
@@ -82,6 +85,9 @@
 	<!-- CSS PAGE -->
     <!-- select2 -->
     <link rel="stylesheet" href="sources/select2/select2.min.css">
+
+    <!-- bootstrap-datetimepicker -->
+    <link rel="stylesheet" href="sources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
 	<!-- /CSS PAGE -->
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -855,9 +861,10 @@
                                     <div class="col-sm-6">
                                         <p class="title-note mar-b-20 ">Language reviews</p>
                                         <div class="form-group">
-                                            <select name="" class="select2 form-control">
+                                            <select class="select2">
                                                 <option value="">All Language</option>
-                                                <option value="">UK</option>
+                                                <option value="">Thailan</option>
+                                                <option value="">VietNam</option>
                                             </select>
                                         </div>
                                     </div>
@@ -889,55 +896,146 @@
                             <div class="modal-body__content modal-pad-30">
                                 <div class="modal-body__title fz21 fw-bold color-dark-blue mar-b-25 text-center">Get AliExpress Reviews</div>
                                 <div class="row">
-                                    <div class="col-xs-6">
-                                        <p class="title-note mar-b-20 ">Only with star</p>
-                                        <div class="fz11">
-                                            <label class="wrap-custom-box fw-light mar-b-15"> Only get <span class="fw-bold color-pink">5 stars</span> reviews
-                                                <input type="checkbox" checked="checked">
-                                                <span class="checkmark-ckb"></span>
-                                            </label>
-
-                                            <label class="wrap-custom-box fw-light mar-b-15"> Only get <span class="fw-bold color-pink">4 stars</span> reviews
-                                                <input type="checkbox" checked="checked">
-                                                <span class="checkmark-ckb"></span>
-                                            </label>
+                                    <div class="col-md-12">
+                                        <p class="title-note mar-b-20 ">Reviewer name</p>
+                                        <div class="form-group">
+                                            <input type="text" name="" value="" placeholder="Name" class="form-control">
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-6">
-                                        <p class="title-note mar-b-20 ">Only with content</p>
-                                        <div class="fz11">
-                                            <label class="wrap-custom-box fw-light mar-b-15"> Only review with <span class="fw-bold color-pink">photos</span>
-                                                <input type="checkbox" checked="checked">
-                                                <span class="checkmark-ckb"></span>
-                                            </label>
-
-                                            <label class="wrap-custom-box fw-light mar-b-15"> Only review with <span class="fw-bold color-pink">content</span>
-                                                <input type="checkbox" checked="checked">
-                                                <span class="checkmark-ckb"></span>
-                                            </label>
+                                    <div class="col-md-12">
+                                        <div class="form-group" style="margin-left: -5px;">
+                                            <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star icon-ic-star-24px" data-empty="ali-rating ali-rating--star icon-ic-star-border-24px" data-fractions="2"/>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <p class="title-note mar-b-20 ">Date</p>
+                                            <input type='text' class="form-control datetimepicker" placeholder="dd / mm / yyyy" name="" required="" value="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <p class="title-note mar-b-20 ">Country</p>
+                                            <select class="select2-flag-multi" multiple>
+                                                <option value="">Loading...</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
 
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <p class="title-note mar-b-20 ">Feedback</p>
+                                            <textarea name="" placeholder="Your thinking" class="form-control vertical-resize" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="modal-footer text-center mar-b-25 pad-t-0">
-                            <button class="btn btn-primary fw-bold pull-right">Create</button>
-                            <button class="btn btn-default btn-hvr-pink fw-bold pull-left" data-dismiss="modal">Cancel</button>
-                            <div class="clearfix"></div>
+                            <button class="btn btn-primary fw-bold">Create</button>
+                            <button class="btn btn-default btn-hvr-pink fw-bold" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- END: Default reviews -->
+            
+            <!-- Edit reviews -->
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modalEditReviews">Edit Reviews</button>
+
+            <div class="modal ali-modal ali-modal--noline ali-modal--style-edit-review fade" id="modalEditReviews" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+
+                        <div class="modal-body pad-b-0 mar-b-20">
+                            <div class="modal-body__content modal-pad-30">
+                                <div class="modal-body__title fz21 fw-bold color-dark-blue mar-b-25 text-center">Edit Reviews</div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="wrapper-preview-img">
+                                            <label for="preview-input">
+                                                <img src="http://via.placeholder.com/90x90" id="preview-result" class="img-circle" alt="Domain.com">
+                                                <input type="file" id="preview-input" class="hidden">
+                                                <span class="icon-ic-add-24px"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-9">
+                                        <p class="title-note mar-b-20 ">Reviewer name</p>
+                                        <div class="form-group">
+                                            <input type="text" name="" value="" placeholder="Name" class="form-control mar-b-10">
+                                            <div class="form-group" style="margin-left: -5px;">
+                                                <input type="hidden" class="rating-tooltip-manual" data-filled="ali-rating ali-rating--star icon-ic-star-24px" data-empty="ali-rating ali-rating--star icon-ic-star-border-24px" data-fractions="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <p class="title-note mar-b-20 ">Date</p>
+                                            <input type='text' class="form-control datetimepicker" placeholder="dd / mm / yyyy" name="" required="" value="" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <p class="title-note mar-b-20 ">Country</p>
+                                            <select class="select2-flag-multi" multiple>
+                                                <option value="">Loading...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <p class="title-note mar-b-20 ">Feedback</p>
+                                            <textarea name="" placeholder="Your thinking" class="form-control vertical-resize" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <p class="title-note" style="margin-bottom: -5px;">Upload photo</p>
+                                            <div class="wrapper-up-photo">
+                                                <div id="result" class="pad-0 d-inline-block">
+                                                    <label class="btn btn-default btn-hvr-pink wrapper-up-photo__button">
+                                                        <span class="icon-ic-add-24px"></span>
+                                                        <input type="file" id="up-photos-input" class="hidden" multiple accept=".jpg, .jpeg, .png" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer text-center mar-b-25 pad-t-0">
+                            <button class="btn btn-primary fw-bold">Create</button>
+                            <button class="btn btn-default btn-hvr-pink fw-bold" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END: Edit reviews -->
         </div>
     </div>
     <!-- END: CONTENT WRAPPER -->
@@ -953,10 +1051,149 @@
     <!-- select2 -->
     <script src="sources/select2/select2.min.js"></script>
 
+    <!-- Rating -->
+    <script src="sources/rating/bootstrap-rating.min.js"></script>
+
+    <!-- moment -->
+    <script src="sources/bootstrap-datetimepicker/moment.js"></script>
+
+    <!-- bootstrap-datetimepicker -->
+    <script src="sources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function() {
-            $('.select2').select2();
+            if($('.select2').length) 
+                $('.select2').select2();
+
+            if($('.select2-flag-multi').length) {
+                getFlagsSelect2('.select2-flag-multi');
+                $('.select2-flag-multi').select2({
+                    placeholder: "", //placeholder
+                    templateResult: setCurrency,
+                    templateSelection: setCurrency,
+                });
+            }
         });
+    </script>
+
+    <script type="text/javascript">
+        // JS preview image
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#preview-result').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $(document).ready(function() {
+            $("#preview-input").change(function() {
+                if($(this).val() == "") {
+                    $('#preview-result').attr('src', 'http://via.placeholder.com/90x90');
+                    return false;
+                }
+
+                readURL(this);
+            });
+        });
+    </script>
+    
+    <!-- Upload photos -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            upPhotos();
+            function upPhotos() {
+                //Check File API support
+                if(window.File && window.FileList && window.FileReader)
+                {
+                    var filesInput = document.getElementById("up-photos-input");
+                    
+                    filesInput.addEventListener("change", function(event){
+                        $('.wrapper-up-photo__item').remove();
+                        
+                        var files = event.target.files; //FileList object
+                        var output = document.getElementById("result");
+                        
+                        for(var i = 0; i< files.length; i++)
+                        {
+                            var file = files[i];
+                            
+                            //Only pics
+                            if(!file.type.match('image'))
+                              continue;
+                            
+                            var picReader = new FileReader();
+                            picReader.addEventListener("load",function(event){
+                                
+                                var picFile = event.target;
+                                // console.log(picFile);
+                                
+                                var div = document.createElement("div");
+                                div.classList = "wrapper-up-photo__item d-inline-block";
+                                div.innerHTML = "<img src='"+picFile.result+"' id=\"preview-result\" class=\"img-rounded\" title='"+picFile.name+"' />"
+                               
+                                output.prepend(div);            
+                            });
+                            
+                             //Read the image
+                            picReader.readAsDataURL(file);
+                        }                               
+                       
+                    });
+                }
+                else {
+                    console.log("Your browser does not support File API");
+                }
+            }
+        });
+    </script>
+
+    <!-- Rating -->
+    <script>
+        $(document).ready(function() {
+            $('.rating-tooltip-manual').rating({
+                extendSymbol: function() {
+                    var title;
+                    $(this).tooltip({
+                        container: 'body',
+                        placement: 'top',
+                        trigger: 'manual',
+                        title: function() {
+                            return title;
+                        }
+                    });
+                    $(this).on('rating.rateenter', function(e, rate) {
+                        title = rate;
+                        $(this).tooltip('show');
+                    })
+                    .on('rating.rateleave', function() {
+                        $(this).tooltip('hide');
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- datetimepicker -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.datetimepicker').datetimepicker({
+                format: 'DD/MM/YYYY',
+                icons: {
+                    time: 'icon-ic-access-alarms-24px',
+                    date: 'icon-ic-date-range-24px',
+                    up: 'icon-ic-arrow-drop-up-24px',
+                    down: 'icon-ic-arrow-drop-down-24px',
+                    previous: 'icon-ic-chevron-left-24px',
+                    next: 'icon-ic-chevron-right-24px',
+                    today: 'icon-ic-fullscreen-24px',
+                    clear: 'icon-ic-delete-sweep-24px',
+                    close: 'icon-ic-block-24px'
+                }
+            });
+        }); 
     </script>
 	<!-- =========================== END: SCRIPT PAGE ========================== -->
 
