@@ -1,0 +1,108 @@
+$min-height-input: 40px;
+.select2 {
+   	min-height: $min-height-input;
+   	width: 100% !important;
+
+	&-selection {
+		min-height: $min-height-input !important;
+		box-shadow: 0 0 0 0px $form-control-box-shadow-color;
+		border-color: $border-solid-color !important;
+
+		&__rendered {
+		    padding: 0 20px !important;
+			line-height: 40px !important;
+			@include border-radius($border-radius-input);
+		}
+
+		&__arrow {
+			right: 10px !important;
+			top: 50% !important;
+		    transform: translateY(-50%);
+			
+		    b {  
+				border: none !important;
+		    }
+
+		    &:after {
+				content: "\e917";
+				border: none !important;
+				font-size: 10px;
+				color: #A4AFB7;
+				transform: translateY(-50%);
+				position: absolute;
+				top: 50%;
+				@include font-icomoon();
+				@include size(10px, 10px);
+	    	}
+		}
+    }
+}
+
+.select2-container {
+	.select2-dropdown {
+		border-color: $border-solid-color !important;
+	}
+
+	.select2-search {
+		padding: 10px;
+
+		&__field {
+			transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+		    box-shadow: 0 0 0 0px $form-control-box-shadow-action;
+			padding: 0 8px !important;
+			min-height: 35px;
+			font-size: 13px;
+			border-color: $border-solid-color-action !important;
+			@include border-radius($border-radius-input);
+			
+			&:focus {
+				background-color: #fff;
+				border-color:$border-solid-color-action !important;
+				outline: 0;
+				box-shadow: $form-control-box-shadow-action;
+			}
+		}
+	}
+}
+
+.select2-container {
+	.ali-flag-slc {
+		padding-left: 40px !important;
+		display: inline-block;
+		line-height: 25px;
+		width: 100%;
+	}
+}
+
+// Multi select2
+select[multiple].select2-flag-multi + .select2,
+select[multiple].select2-flag + .select2 {
+	.select2-selection__rendered {
+	    line-height: inherit !important;
+		height: 100%;
+		line-height: 0px;
+
+		li {
+		    padding: 0 10px;
+
+		    .select2-search__field {
+		    	margin-top: 2px;
+		    }
+		}
+
+		.select2-selection__choice {
+			background: #eaeaea;
+			border-radius: 3px;
+			border-color: #b9b9b9;
+			margin-top: 6px;
+		}
+	}
+}
+
+select[multiple].select2-flag-multi + .select2 {
+	.select2-selection__rendered {
+		display: inherit !important;
+		padding: 0 6px !important;
+	}
+}
+

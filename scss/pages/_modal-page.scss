@@ -1,0 +1,36 @@
+.ali-modal {
+	&--style-great {
+		.modal-footer {
+			button {
+				padding-top: 15px;
+				padding-bottom: 20px;
+
+				[class^="icon-"] {
+					font-size: 30px;
+				}
+			}
+		}
+	}
+
+	&--style-get-review {
+		.modal-footer {
+			padding-left: 45px !important;
+			padding-right: 45px !important;
+
+			button {
+				width: 130px;
+			}
+		}
+
+		.select2-selection__rendered {
+			font-weight: 700;
+		}
+	}
+
+	&--style-edit-review {
+		.ali-rating {
+			font-size: 13px !important;
+		}
+	}
+}
+

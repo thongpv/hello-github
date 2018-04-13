@@ -1,0 +1,61 @@
+.product-reviews-page {
+	.wrapper-tbl-action {
+		._btn-back {
+			color: #4D4F5C;
+
+			span:before {
+				color: #A4AFB7;
+				font-size: 10px;
+				@include transition($time-transition);
+			}
+
+			&:hover, &:focus {
+				color: #fff;
+
+				span:before {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.wrapper-tbl-action-2 {
+		.input-group--search {
+			max-width: 280px;
+
+		    button {
+		    	height: 35px;
+		    }
+		}
+
+		button.wid130 {
+	    	width: 130px !important;
+	    }
+	}
+
+	.table-ali-custom  {
+		thead > tr > th {
+			color: $dark-blue;
+		}
+
+		.media-body {
+		    vertical-align: middle;
+
+		    a {
+		    	color: #3B86FF;
+		    }
+		}
+	}
+
+	._btnEdit {
+		.path2:before {
+			color: #000;
+		}
+
+		&:hover, &:focus {
+			span:before {
+				color: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,132 @@
+aside.main-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    min-height: 100%;
+    width: 260px;
+    z-index: $main-sidebar-zindex;
+    background-color: $sidebar-main;
+    color: $white;
+    overflow: hidden;
+    @include transition(.3s ease-in-out,width .3s ease-in-out);
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        a[data-toggle="collapse"]:after {
+            content: "\ea16";
+            position: absolute;
+            top: 25px;
+            right: 15px;
+            font-size: 8px;
+            color: #b8c7ce;
+            transform: translateY(-50%);
+            transform-origin: 25% 25%;
+            @include font-icomoon();
+            @include transition(.15s ease-in-out,width .15s ease-in-out);
+        }
+
+        a {
+            color: #fff;
+            display: inline-block;
+            width: 100%;
+            padding: 20px 10px;
+            padding-left: 50px;
+            padding-right: 30px;
+            text-decoration: none;
+            border-left: solid 3px transparent;
+            position: relative;
+            @include transition(.15s ease-in-out,width .15s ease-in-out);
+
+            &:hover {
+                color: $light-red;
+
+                &[data-toggle="collapse"]:after {
+                    color: #fff;
+                }
+            }
+
+            &:before {
+                content: "\e934";
+                position: absolute;
+                top: 50%;
+                left: 25px;
+                font-size: 20px;
+                transform: translate(-50%, -50%);
+                font-family: 'icomoon' !important;
+            }
+
+            &[aria-expanded=true] {
+                border-left: solid 3px #fff;
+                background-color: $purple;
+
+                &[data-toggle="collapse"]:after { 
+                    color: #fff;
+                    @include rotate(-90deg);
+                }
+            }
+
+            &.ico-approve-review:before { content: "\e99c"; }
+            &.ico-create-review:before { content: "\ebb3"; }
+            &.ico-default-review:before { content: "\e99d"; }
+            &.ico-general-setting:before { content: "\e947"; }
+            &.ico-comment-form:before { content: "\ecbd"; }
+            &.ico-app-intergration:before { content: "\ec6b"; }
+            &.ico-get-star:before { content: "\ea1b"; }
+            &.ico-upgrade-version:before { content: "\ea66"; }
+            &.ico-input-form:before { content: "\e9d6"; }
+            &.ico-favorite:before { content: "\ed53"; }
+            &.ico-hourglass:before { content: "\ed52"; }
+            &.ico-logout:before { content: "\ea84"; }
+        }
+
+        li.active > a {
+            color: $light-red;
+        }
+
+        .panel-collapse {
+            background-color: #1b1b29;
+            border-bottom: solid 1px #131313;
+
+            .panel-body {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    ul.sidebar-menu {
+        > li {
+            > a {
+                color: #fff;
+
+                &:hover {
+                    background-color: $light-red-hvr;
+                    border-left: solid 3px #fff;
+                }
+            }
+
+            &.active > a{
+                background-color: $purple;
+                border-left: solid 3px #fff;
+            }
+        }
+    }
+
+    li.divide {
+        height: 1px;
+        background-color: #1d1e2e;
+    }
+
+    li.header {
+        padding: 10px;
+        padding-left: 20px;
+        background-color: #1c1e2d;
+        color: #4b646f;
+    }
+}

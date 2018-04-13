@@ -1,0 +1,103 @@
+.btn {
+	outline: none !important;
+	// margin: 3px;
+	min-height: 35px;
+	box-shadow: 0 0 0 0px transparent;
+	@include transition(.15s);
+	@include border-radius($border-radius-button);
+}
+
+.btn-primary {
+	background-color: $btn-primary-bg;
+
+	&.active, .open > &.dropdown-toggle,
+	&:active, &:focus {
+		box-shadow: 0 0 0 3px #f6366578 !important;
+		background-color: #F63665 !important;
+		border: solid 1px #f63664 !important;
+	}
+
+	&:hover {
+		border: solid 1px #f63664;
+		background-color: $pink-color-hv;
+	}
+}
+
+.btn-default {
+	border: solid 1px $btn-default-border;
+	
+	&:active, &:focus {
+		box-shadow: 0 0 0 3px #f1f1f1 !important;
+		border: solid 1px $btn-default-border !important;
+	}
+
+	&:hover {
+		background-color: #b1bfce36;
+	}
+}
+
+.btn-pink {
+	background-color: $pink-color;
+	color: $btn-pink-color !important;
+	border: solid 1px $pink-color;
+
+	&:active, &:focus {
+		box-shadow: 0 0 0 3px #f6366578 !important;
+		background-color: #F63665 !important;
+		border: solid 1px #f63664 !important;
+	}
+
+	&:hover {
+		border: solid 1px #f63664;
+		background-color: $pink-color-hv;
+	}
+}
+
+.btn-hvr-pink {
+	&:hover {
+		border: solid 1px #f63664;
+		color: $white;
+		background-color: $pink-color-hv;
+	}
+
+	&:active, &:focus {
+		color: $white !important;
+		box-shadow: 0 0 0 3px #f6366578 !important;
+		background-color: #F63665 !important;
+		border: solid 1px #f63664 !important;
+	}
+
+	&.active {
+		color: $white !important;
+		box-shadow: 0 0 0 3px #f6366578 !important;
+		background-color: #F63665 !important;
+		border: solid 1px #f63664 !important;
+	}
+}
+
+.btn-link--primary {
+	color: $blue;
+	
+	&:hover {
+		color: $purple;
+	}
+
+	&:focus {
+		color: $purple;
+	}
+}
+
+.ali-icon-down {
+	position: relative;
+
+	&:after {
+		content: "\e917";
+		position: absolute;
+		font-family: 'icomoon' !important;
+		font-size: 7px;
+		top: 50%;
+		right: 5px;
+		transform: translate(-50%, -50%);
+	}
+}
+

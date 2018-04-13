@@ -1,0 +1,27 @@
+.tagsinput {
+	+ div {
+		width: 100% !important;
+		border: solid 1px $border-solid-color !important;
+		@include border-radius($border-radius-input);
+
+		span.tag {
+			color: #fff !important;
+			background-color: $purple !important;
+			border-color: $purple !important;
+			border-radius: 2px !important;
+
+			a {
+				color: #fff !important;
+			    vertical-align: text-bottom;
+			}
+
+			&:hover {
+				background-color: $light-red-hvr !important;
+			}
+		}
+	}
+
+	&:focus + div {
+		background-color: red !important;
+	}
+}

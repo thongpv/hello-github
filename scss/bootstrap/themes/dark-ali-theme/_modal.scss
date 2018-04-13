@@ -1,0 +1,54 @@
+.ali-modal {
+	.modal-content {
+		border-radius: $modal-border-radius;
+	}
+	
+	.modal-pad-30 {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	&--noline {
+		.modal-header {
+			border-bottom: none;
+		}
+
+		.modal-footer {
+			border-top: none;
+		}
+	}
+
+	.modal-body {
+		.title-note {
+			font-size: 15px;
+			color: $dark-blue-color;
+			line-height: 1.7;
+			font-weight: bold;
+		}
+
+		.note {
+			font-size: 13px;
+			color: $dark-blue-color;
+			line-height: 1.7;
+			font-weight: bold;
+		}
+
+		.sub-note {
+			font-size: 11px;
+			color: #242539;
+			line-height: 1.6;
+		}
+	}
+
+	.modal-footer {
+		padding-bottom: 35px;
+
+		&.text-center {
+			text-align: center !important;
+		}
+
+		&.text-left {
+			text-align: left !important;
+		}
+	}
+}

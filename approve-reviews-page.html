@@ -89,14 +89,20 @@
 <!-- body class: navbar-fixed -->
 <body>
     <div class="wrapper">
+    <div class="wrapper">
     <!-- HEADER -->
     <header class="main-header">
         <a href="#" class="logo">
+            <button class="btn-link sidebar-toggle hidden-xs hidden-sm" data-toggle="push-menu" role="button">
+                <span class="icon-ic-menu-24px"></span>
+            </button>
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LR</span>
+            <!-- <span class="logo-mini"><b>A</b>LR</span> -->
 
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>ALI</b>Reviews</span>
+            <span class="logo-lg">
+                <img src="images/alireviews-logo.png" alt="">
+            </span>
         </a>
 
         <nav class="navbar navbar-static-top">
@@ -120,213 +126,140 @@
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <!-- Button -->
-                    <!-- Messages: style can be found in dropdown.less-->
+                    <!-- Messages: style can be found in-->
                     <!-- <li class="hidden-xs hidden-sm">
                         <button href="#" class="btn btn-primary fw-bold">
                             You’re using <span class="color-pink">FREE</span> version. Get more with <span class="color-pink">UNLIMITED</span>
                         </button>
                     </li> -->
 
-                    <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
+                    <li class="dropdown dropdown-header-menu tasks-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="icon-icon_help-center"></span>
                             <!-- <span class="label label-success">4</span> -->
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 4 messages</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <!-- start message -->
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="http://via.placeholder.com/160x160" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                Support Team
-                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <!-- end message -->
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="http://via.placeholder.com/128x128" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                AdminLTE Design Team
-                                                <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="http://via.placeholder.com/128x128" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                Developers
-                                                <small><i class="fa fa-clock-o"></i> Today</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="http://via.placeholder.com/128x128" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                Sales Department
-                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="http://via.placeholder.com/128x128" class="img-circle" alt="User Image">
-                                            </div>
-                                            <h4>
-                                                Reviewers
-                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                            </h4>
-                                            <p>Why not buy a new awesome theme?</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
-                        </ul>
+                        <div  class="dropdown-menu">
+                            <div class="header fz17 fw-bold">Task</div>
+                            <ul class="list-unstyled">
+                                <li class="item error">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="footer">
+                                <a href="#" class="color-dark-blue">See all</a>
+                            </div>
+                        </div>
                     </li>
-                    <!-- Notifications: style can be found in dropdown.less -->
-                    <li class="dropdown notifications-menu">
+                    
+
+                    <li class="dropdown dropdown-header-menu messages-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="icon-icon_chat-notification-1"></i>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the page and may cause design problems
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-red"></i> 5 new members joined
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-user text-red"></i> You changed your username
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">View all</a></li>
-                        </ul>
+                        <div  class="dropdown-menu">
+                            <div class="header fz17 fw-bold">Message</div>
+                            <ul class="list-unstyled">
+                                <li class="item error">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                <li class="item error">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                <li class="item error">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                <li class="item error">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="footer">
+                                <a href="#" class="color-dark-blue">See all</a>
+                            </div>
+                        </div>
                     </li>
-                    <!-- Tasks: style can be found in dropdown.less -->
-                    <li class="dropdown tasks-menu">
+
+                   
+                    <li class="dropdown dropdown-header-menu notifications-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="icon-ic-notifications-24px has-notif has-notif--warning p-relative"></span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 9 tasks</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Design some buttons
-                                                <small class="pull-right">20%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">20% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Create a nice theme
-                                                <small class="pull-right">40%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">40% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Some task I need to do
-                                                <small class="pull-right">60%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li>
-                                        <!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Make beautiful transitions
-                                                <small class="pull-right">80%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">80% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">View all tasks</a>
-                            </li>
-                        </ul>
+                        <div  class="dropdown-menu">
+                            <div class="header fz17 fw-bold">Notifications</div>
+                            <ul class="list-unstyled">
+                                <li class="item error">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="">
+                                        <p class="fw-bold fz13 color-grey-400 mar-b-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ducimus?Lorem ipsum dolor sit amet.</p>
+                                        <p class="fz11 color-grey-400">Lorem ipsum dolor sit amet. ipsum dolor sit amet. ipsum dolor sit amet.</p>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            <div class="footer">
+                                <a href="#" class="color-dark-blue">See all</a>
+                            </div>
+                        </div>
                     </li>
                     <!-- Divide -->
                     <li class="dropdown tasks-menu">
                         <a href="javascript:void(0)" class="dropdown-divide"></a>
                     </li>
-                    <!-- User Account: style can be found in dropdown.less -->
+                    <!-- User Account: style can be found in -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="hidden-xs ali-icon-down">John Doe</span>
@@ -334,40 +267,11 @@
                             <img src="http://via.placeholder.com/38x38" class="user-image img-circle" alt="User Image">
                         </a>
 
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="http://via.placeholder.com/15x15" class="img-circle" alt="User Image">
-
-                                <p>
-                                    Alexander Pierce - Web Developer
-                                    <small>Member since Nov. 2012</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <div class="row">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-                            </li>
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                </div>
-                            </li>
+                        <ul class="dropdown-menu hidden-xs">
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">Message</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -386,10 +290,11 @@
                     <div id="treeview_1" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
+                                <li><a href="dashboard-manage-reviews-page.html" class="ico-hourglass">Dashboard</a></li>
                                 <li><a href="#" class="ico-hourglass">Pending Reviews</a></li>
-                                <li><a href="#" class="ico-approve-review">Approve Reviews</a></li>
-                                <li><a href="#" class="ico-create-review">Create Review Page</a></li>
-                                <li><a href="#" class="ico-default-review">Default Reviews</a></li>
+                                <li><a href="approve-reviews-page.html" class="ico-approve-review">Approve Reviews</a></li>
+                                <li><a href="create-reviews-page.html" class="ico-create-review">Create Review Page</a></li>
+                                <li><a href="default-reviews-page.html" class="ico-default-review">Default Reviews</a></li>
                             </ul>
                         </div>
                     </div>
@@ -400,6 +305,7 @@
                     <div id="treeview_2" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul>
+                                <li><a href="dashboard-general-setting-page.html" class="ico-input-form">Dashboard</a></li>
                                 <li><a href="#" class="ico-input-form">Input Form Edit</a></li>
                                 <li class="active"><a href="#" class="ico-comment-form">Comment Form Edit</a></li>
                             </ul>
@@ -409,9 +315,15 @@
 
                 <li class="header">MAIN NAVIGATION</li>
                 <li><a href="#" class="ico-app-intergration">Apps Intergration</a></li>
-                <li><a href="#" class="ico-get-star">Get starts</a></li>
+                <li><a href="getting-started.html" class="ico-get-star">Get starts</a></li>
                 <li class="divide"></li>
-                <li><a href="#" class="ico-upgrade-version">Upgrade version</a></li>
+                <li><a href="upgrade-version-page.html" class="ico-upgrade-version">Upgrade version</a></li>
+                <li class="header">PAGE ORDER</li>
+                <li><a href="welcome-page.html" class="ico-app-intergration">Welcome</a></li>
+                <li><a href="modal-page.html" class="ico-app-intergration">Modal</a></li>
+                <li><a href="component.html" class="ico-app-intergration">Component</a></li>
+                <li class="hidden-sm hidden-md hidden-lg divide"></li>
+                <li class="hidden-sm hidden-md hidden-lg"><a href="#" class="ico-logout">Logout</a></li>
             </ul>
         </div>
     </aside>
