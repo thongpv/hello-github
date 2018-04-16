@@ -1,4 +1,18 @@
 .ali-modal {
+	.modal-header {
+		.close {
+			opacity: 1;
+
+			&:hover {
+				opacity: .8;
+			}
+		}
+		
+		.icon-ic-close-24px:before {
+			color: #242539;
+		}
+	}
+
 	&--style-great {
 		.modal-footer {
 			button {

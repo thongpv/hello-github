@@ -30,6 +30,13 @@
 		margin: auto;
 		margin-bottom: 40px;
 	}
+
+	.product-star-preview {
+		.col-md-7 {
+		    border-right: 0;
+	        margin-bottom: 35px;
+		}
+	}
 }
 
 @media only screen and (max-width: 768px) {
@@ -49,7 +56,8 @@
 	.text-align-xs-c { text-align: center !important; }
 	.text-align-xs- { text-align: inherit !important; }
 	.hidden-xs-down {display: none !important;}
-	.w-xs-100 {width: 100% !important;}
+	.w-xs-100, .w-100-xs {width: 100% !important;}
+	.mar-b-15-xs {margin-bottom: 15px !important;}
 
 	.media--point .media-body {
 		&--write-new  {

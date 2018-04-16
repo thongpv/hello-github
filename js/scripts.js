@@ -76,8 +76,10 @@ function getFlagsSelect2(el_ID) {
 }
 
 function setCurrency (currency) {
+	console.log(currency);
     if (!currency.id) { return currency.text; }
     var $currency = $('<span class="ali-flag-slc ' + currency.element.value + '">' + currency.text + '</span>');
     return $currency;
 };
+
 // END: Select2 render flag

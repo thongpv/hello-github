@@ -1,0 +1,49 @@
+.product-star-preview {
+	.col-md-7 {
+	    border-right: solid 1px #e0e0e0;
+	}
+	
+}
+
+ul.star-process {
+	li {
+		display: table;
+	    width: 100%;
+	    margin-bottom: 10px;
+
+		>p, >div, >span {
+			display: table-cell;
+		}
+
+		>p {
+			width: 50px;
+
+			.icon-icon_star-1:before {
+				color: #FFB303;
+				font-size: 18px;
+			}
+
+			>span {
+				margin-right: 5px;
+			}
+		}
+
+		>div {
+			.progress {
+				height: 10px;
+				margin-bottom: 0;
+			}
+
+			.progress-warning {
+				height: 10px;
+				font-size: 10px;
+				line-height: 10px;
+				background-color: #FFB303;
+			}
+		}
+
+		>span {
+			width: 50px;
+		}
+	}
+}

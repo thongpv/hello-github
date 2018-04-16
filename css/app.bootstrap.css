@@ -7228,30 +7228,6 @@ textarea.vertical-resize {
   display: inline-block;
 }
 
-.has-notif:after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  right: -3px;
-  border: solid 3px #fff;
-  background-color: #BCBCCB;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-}
-
-.has-notif--active:after {
-  background-color: #4ad991;
-}
-
-.has-notif--danger:after {
-  background-color: #F63665;
-}
-
-.has-notif--warning:after {
-  background: #FFC06A;
-}
-
 .wrapper-tbl-responsive {
   overflow-x: auto;
 }
@@ -7983,6 +7959,73 @@ select[multiple].select2-flag-multi + .select2 .select2-selection__rendered {
   border-bottom: 0;
 }
 
+.product-star-preview .col-md-7 {
+  border-right: solid 1px #e0e0e0;
+}
+
+ul.star-process li {
+  display: table;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+ul.star-process li > p, ul.star-process li > div, ul.star-process li > span {
+  display: table-cell;
+}
+
+ul.star-process li > p {
+  width: 50px;
+}
+
+ul.star-process li > p .icon-icon_star-1:before {
+  color: #FFB303;
+  font-size: 18px;
+}
+
+ul.star-process li > p > span {
+  margin-right: 5px;
+}
+
+ul.star-process li > div .progress {
+  height: 10px;
+  margin-bottom: 0;
+}
+
+ul.star-process li > div .progress-warning {
+  height: 10px;
+  font-size: 10px;
+  line-height: 10px;
+  background-color: #FFB303;
+}
+
+ul.star-process li > span {
+  width: 50px;
+}
+
+.has-notif:after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -3px;
+  border: solid 3px #fff;
+  background-color: #BCBCCB;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.has-notif--active:after {
+  background-color: #4ad991;
+}
+
+.has-notif--danger:after {
+  background-color: #F63665;
+}
+
+.has-notif--warning:after {
+  background: #FFC06A;
+}
+
 @media only screen and (max-width: 1200px) {
   .text-align-lg-r {
     text-align: right !important;
@@ -8039,6 +8082,10 @@ select[multiple].select2-flag-multi + .select2 .select2-selection__rendered {
     margin: auto;
     margin-bottom: 40px;
   }
+  .product-star-preview .col-md-7 {
+    border-right: 0;
+    margin-bottom: 35px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -8081,8 +8128,11 @@ select[multiple].select2-flag-multi + .select2 .select2-selection__rendered {
   .hidden-xs-down {
     display: none !important;
   }
-  .w-xs-100 {
+  .w-xs-100, .w-100-xs {
     width: 100% !important;
+  }
+  .mar-b-15-xs {
+    margin-bottom: 15px !important;
   }
   .media--point .media-body--write-new button {
     position: static !important;

@@ -9,7 +9,6 @@
 @import "dark-ali-theme/dropdown";
 @import "dark-ali-theme/input";
 @import "dark-ali-theme/rating";
-@import "dark-ali-theme/icon";
 @import "dark-ali-theme/div-table";
 @import "dark-ali-theme/table";
 @import "dark-ali-theme/pagination";
@@ -25,6 +24,11 @@
 @import "dark-ali-theme/modal";
 @import "dark-ali-theme/bootstrap-multiselect";
 @import "dark-ali-theme/preview-real";
+@import "dark-ali-theme/product-star";
+
+// ICON
+@import "dark-ali-theme/icon";
+@import "dark-ali-theme/icon-style.scss";
 
 //  Responsive
 @import "dark-ali-theme/responsive";

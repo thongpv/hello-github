@@ -132,6 +132,18 @@ body {
   padding-bottom: 110px;
 }
 
+.ali-modal .modal-header .close {
+  opacity: 1;
+}
+
+.ali-modal .modal-header .close:hover {
+  opacity: .8;
+}
+
+.ali-modal .modal-header .icon-ic-close-24px:before {
+  color: #242539;
+}
+
 .ali-modal--style-great .modal-footer button {
   padding-top: 15px;
   padding-bottom: 20px;
