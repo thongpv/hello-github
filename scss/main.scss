@@ -1,8 +1,8 @@
-/* =========================
-	Project Name: Alireviews
-	Author: PhamThong
-	Version: 1.0.0
-============================ */ 
+// =========================== //
+//	Project Name: Alireviews   //
+//	Author: PhamThong          //
+//	Version: 1.0.0             //
+//============================ // 
 
 /* BASE - Base styles, variable, mixins, etc */
 // @import "bootstrap/mixins";
@@ -13,7 +13,10 @@
 
 @import 'base/fonts';
 @import 'base/keyframes';
+
+/* EFF - styles */
 @import 'eff/hover-master/hover';
+@import 'eff/animate/animate';
 
 /* PAGES - styles */
 @import 'pages/contact';

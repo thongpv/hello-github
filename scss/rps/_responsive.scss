@@ -165,6 +165,19 @@
 			}
 		}
 	}
+
+	.product-reviews-page {
+		.wrapper-tbl-action-2 {
+			.wrap-custom-box {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+
+			.wrap-custom-box + div {
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 544px) { 
