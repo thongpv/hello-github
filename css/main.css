@@ -2098,6 +2098,12 @@ aside.main-sidebar a.ico-logout:before {
 }
 
 /* RESPONSIVE - Page layout styles mobile */
+@media only screen and (max-width: 1500px) {
+  .wrap-unlimited {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .wrapper-content .wrapper-space {
     margin-right: 0;
@@ -2281,9 +2287,4 @@ aside.main-sidebar a.ico-logout:before {
   .open-menu--push .wrapper-content {
     padding-left: 55px !important;
   }
-}
-@media only screen and (max-width: 1500px) {
-    .wrap-unlimited {
-        display: none !important;
-    }
 }
