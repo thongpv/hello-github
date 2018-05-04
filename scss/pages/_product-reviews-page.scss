@@ -1,61 +1,92 @@
 .product-reviews-page {
-	.wrapper-tbl-action {
-		._btn-back {
-			color: #4D4F5C;
+    .wrapper-tbl-action {
+        ._btn-back {
+            color: #4d4f5c;
 
-			span:before {
-				color: #A4AFB7;
-				font-size: 10px;
-				@include transition($time-transition);
-			}
+            span:before {
+                color: #a4afb7;
+                font-size: 10px;
+                @include transition($time-transition);
+            }
 
-			&:hover, &:focus {
-				color: #fff;
+            &:hover,
+            &:focus {
+                color: #fff;
 
-				span:before {
-					color: #fff;
-				}
-			}
-		}
-	}
+                span:before {
+                    color: #fff;
+                }
+            }
+        }
+    }
 
-	.wrapper-tbl-action-2 {
-		.input-group--search {
-			max-width: 280px;
+    .wrapper-tbl-action-2 {
+        .input-group--search {
+            max-width: 280px;
 
-		    button {
-		    	height: 35px;
-		    }
-		}
+            button {
+                height: 35px;
+            }
+        }
 
-		button.wid130 {
-	    	width: 130px !important;
-	    }
-	}
+        button.wid130 {
+            width: 130px !important;
+        }
+    }
 
-	.table-ali-custom  {
-		thead > tr > th {
-			color: $dark-blue;
-		}
+    .table-ali-custom {
+        thead > tr > th {
+            color: $dark-blue;
+        }
 
-		.media-body {
-		    vertical-align: middle;
+        .media-body {
+            vertical-align: middle;
 
-		    a {
-		    	color: #3B86FF;
-		    }
-		}
-	}
+            a {
+                color: #3b86ff;
+            }
+        }
+    }
 
-	._btnEdit {
-		.path2:before {
-			color: #000;
-		}
+    ._btnEdit {
+        .path2:before {
+            color: #000;
+        }
 
-		&:hover, &:focus {
-			span:before {
-				color: #fff;
-			}
-		}
-	}
+        &:hover,
+        &:focus {
+            span:before {
+                color: #fff;
+            }
+        }
+    }
+
+    .type-collection {
+        a {
+            color: #3b86ff;
+        }
+    }
+
+    .media--point .media-body--write-new button {
+        transform: translate(0, -40%);
+    }
+
+    .input-group--search {
+        input[type="text"] {
+            font-size: 14px;
+        }
+    }
+
+    button {
+        .icon-ic-edit-24px {
+            font-size: 12px;
+        }
+
+        &:hover,
+        &:focus {
+            .icon-ic-edit-24px:after {
+                background-color: #fff;
+            }
+        }
+    }
 }

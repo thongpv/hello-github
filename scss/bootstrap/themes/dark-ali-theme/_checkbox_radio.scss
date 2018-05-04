@@ -1,12 +1,12 @@
-$time-transition-rdb-ckb: .3s ;
+$time-transition-rdb-ckb: 0.3s;
 .wrap-custom-box {
-    display: block;
+    display: inline-block;
     position: relative;
     padding-left: 25px;
     min-height: 20px;
     cursor: pointer;
     @include user-select(none);
-    
+
     .checkmark-rdb,
     .checkmark-ckb {
         position: absolute;
@@ -22,10 +22,10 @@ $time-transition-rdb-ckb: .3s ;
 
     .checkmark-rdb {
         background-color: #fff;
-        border: solid 3px #A4AFB7;
+        border: solid 3px #a4afb7;
         @include border-radius(50%);
     }
-    
+
     // Checkbox
     input[type="radio"],
     input[type="checkbox"] {
@@ -39,7 +39,7 @@ $time-transition-rdb-ckb: .3s ;
     &:hover input[type="checkbox"] ~ .checkmark-ckb {
         background-color: #f6366447;
     }
-    
+
     input[type="checkbox"]:checked ~ .checkmark-ckb {
         background-color: $pink-color;
     }
@@ -48,19 +48,23 @@ $time-transition-rdb-ckb: .3s ;
         background-color: #fff;
         border-color: $pink-color;
     }
-    
+
     &:hover .checkmark-rdb {
         border-color: #f6366447;
     }
 
-    &:hover input[type="radio"]:disabled  ~ .checkmark-rdb {
-        border-color: #A4AFB7;
+    &:hover input[type="radio"]:disabled ~ .checkmark-rdb {
+        border-color: #a4afb7;
     }
 
     input[type="radio"]:disabled ~ .checkmark-rdb,
     input[type="checkbox"]:disabled ~ .checkmark-ckb {
         background-color: #eee;
         cursor: not-allowed;
+    }
+
+    input[type="radio"]:disabled ~ .checkmark-rdb {
+        border: solid 3px #e2e2e2 !important;
     }
 
     .checkmark-rdb:after,
@@ -75,7 +79,7 @@ $time-transition-rdb-ckb: .3s ;
     .checkmark-rdb:after {
         transform: translate(-50%, -50%) scale(0);
     }
-    
+
     input[type="checkbox"]:checked ~ .checkmark-ckb:after {
         opacity: 1;
         left: 8px;
@@ -86,16 +90,15 @@ $time-transition-rdb-ckb: .3s ;
         border-width: 0 2px 2px 0;
         @include rotate(45deg);
     }
-    
 
     input[type="radio"]:checked ~ .checkmark-rdb:after {
         opacity: 1;
         background-color: $pink-color;
         transform: translate(-50%, -50%) scale(1);
     }
-   
+
     /* Style the indicator (dot/circle) */
-     .checkmark-rdb:after {
+    .checkmark-rdb:after {
         top: 50%;
         left: 50%;
         width: 8px;

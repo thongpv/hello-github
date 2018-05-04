@@ -9,8 +9,8 @@ aside.main-sidebar {
     background-color: $sidebar-main;
     color: $white;
     overflow: hidden;
-    @include transition(.3s ease-in-out,width .3s ease-in-out);
-    
+    @include transition(0.3s ease-in-out, width 0.3s ease-in-out);
+
     ul {
         list-style: none;
         margin: 0;
@@ -21,14 +21,22 @@ aside.main-sidebar {
         a[data-toggle="collapse"]:after {
             content: "\ea16";
             position: absolute;
-            top: 25px;
+            top: 50%;
             right: 15px;
             font-size: 8px;
             color: #b8c7ce;
             transform: translateY(-50%);
             transform-origin: 25% 25%;
             @include font-icomoon();
-            @include transition(.15s ease-in-out,width .15s ease-in-out);
+            @include transition(0.15s ease-in-out, width 0.15s ease-in-out);
+        }
+
+        ul {
+            a:hover {
+                &::before {
+                    color: $light-red;
+                }
+            }
         }
 
         a {
@@ -41,10 +49,14 @@ aside.main-sidebar {
             text-decoration: none;
             border-left: solid 3px transparent;
             position: relative;
-            @include transition(.15s ease-in-out,width .15s ease-in-out);
+            @include transition(0.15s ease-in-out, width 0.15s ease-in-out);
 
             &:hover {
                 color: $light-red;
+
+                &::before {
+                    color: #fff;
+                }
 
                 &[data-toggle="collapse"]:after {
                     color: #fff;
@@ -58,35 +70,35 @@ aside.main-sidebar {
                 left: 25px;
                 font-size: 20px;
                 transform: translate(-50%, -50%);
-                font-family: 'icomoon' !important;
+                color: #a5a4bf;
+                font-family: "icomoon" !important;
             }
 
-            &[aria-expanded=true] {
+            &[aria-expanded="true"] {
                 border-left: solid 3px #fff;
                 background-color: $purple;
 
-                &[data-toggle="collapse"]:after { 
+                &[data-toggle="collapse"]:after {
                     color: #fff;
                     @include rotate(-90deg);
                 }
-            }
 
-            &.ico-approve-review:before { content: "\e99c"; }
-            &.ico-create-review:before { content: "\ebb3"; }
-            &.ico-default-review:before { content: "\e99d"; }
-            &.ico-general-setting:before { content: "\e947"; }
-            &.ico-comment-form:before { content: "\ecbd"; }
-            &.ico-app-intergration:before { content: "\ec6b"; }
-            &.ico-get-star:before { content: "\ea1b"; }
-            &.ico-upgrade-version:before { content: "\ea66"; }
-            &.ico-input-form:before { content: "\e9d6"; }
-            &.ico-favorite:before { content: "\ed53"; }
-            &.ico-hourglass:before { content: "\ed52"; }
-            &.ico-logout:before { content: "\ea84"; }
+                &:before {
+                    color: #fff;
+                }
+            }
         }
 
-        li.active > a {
+        li.active > a::before {
+            color: #fff;
+        }
+
+        ul li.active > a {
             color: $light-red;
+
+            &:before {
+                color: #f63663;
+            }
         }
 
         .panel-collapse {
@@ -111,7 +123,7 @@ aside.main-sidebar {
                 }
             }
 
-            &.active > a{
+            &.active > a {
                 background-color: $purple;
                 border-left: solid 3px #fff;
             }
@@ -128,5 +140,49 @@ aside.main-sidebar {
         padding-left: 20px;
         background-color: #1c1e2d;
         color: #4b646f;
+    }
+}
+
+aside.main-sidebar {
+    a {
+        &.ico-dashboard:before {
+            content: "\ea7a";
+        }
+        &.ico-approve-review:before {
+            content: "\e99c";
+        }
+        &.ico-create-review:before {
+            content: "\ebb3";
+        }
+        &.ico-default-review:before {
+            content: "\e99d";
+        }
+        &.ico-general-setting:before {
+            content: "\e947";
+        }
+        &.ico-comment-form:before {
+            content: "\ecbd";
+        }
+        &.ico-app-intergration:before {
+            content: "\ec6b";
+        }
+        &.ico-get-star:before {
+            content: "\ea1b";
+        }
+        &.ico-upgrade-version:before {
+            content: "\ea66";
+        }
+        &.ico-input-form:before {
+            content: "\e9d6";
+        }
+        &.ico-favorite:before {
+            content: "\ed53";
+        }
+        &.ico-hourglass:before {
+            content: "\ed52";
+        }
+        &.ico-logout:before {
+            content: "\ea84";
+        }
     }
 }

@@ -2,7 +2,7 @@
 //	Project Name: Alireviews   //
 //	Author: PhamThong          //
 //	Version: 1.0.0             //
-//============================ // 
+//============================ //
 
 /* BASE - Base styles, variable, mixins, etc */
 // @import "bootstrap/mixins";
@@ -11,36 +11,38 @@
 
 @import "variables";
 
-@import 'base/fonts';
-@import 'base/keyframes';
+@import "base/fonts";
+@import "base/keyframes";
 
 /* EFF - styles */
-@import 'eff/hover-master/hover';
-@import 'eff/animate/animate';
+@import "eff/hover-master/hover";
+@import "eff/animate/animate";
 
 /* PAGES - styles */
-@import 'pages/contact';
-@import 'pages/home';
-@import 'pages/create-reviews-page';
-@import 'pages/dashboard-general-setting-page';
-@import 'pages/getting-started-page';
-@import 'pages/dashboard-manage-reviews-page';
-@import 'pages/welcome-page';
-@import 'pages/preview-badge-page';
-@import 'pages/error-page';
-@import 'pages/modal-page';
-@import 'pages/product-reviews-page';
+@import "pages/contact";
+@import "pages/home";
+@import "pages/create-reviews-page";
+@import "pages/dashboard-general-setting-page";
+@import "pages/getting-started-page";
+@import "pages/dashboard-manage-reviews-page";
+@import "pages/welcome-page";
+@import "pages/preview-badge-page";
+@import "pages/error-page";
+@import "pages/modal-page";
+@import "pages/product-reviews-page";
+@import "pages/pending-reviews-page";
+@import "pages/upgrade-version-page";
 
 /* LAYOUTS - Component */
-@import 'modules/component';
-@import 'modules/flags';
+@import "modules/component";
+@import "modules/flags";
 
 /* LAYOUTS - styles */
-@import 'layouts/nav';
-@import 'layouts/header';
-@import 'layouts/footer';
-@import 'layouts/main-aside';
-@import 'layouts/content-wrapper';
+@import "layouts/nav";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/main-aside";
+@import "layouts/content-wrapper";
 
 /* RESPONSIVE - Page layout styles mobile */
-@import 'rps/responsive';
+@import "rps/responsive";
