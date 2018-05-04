@@ -2282,3 +2282,8 @@ aside.main-sidebar a.ico-logout:before {
     padding-left: 55px !important;
   }
 }
+@media only screen and (max-width: 1500px) {
+    .wrap-unlimited {
+        display: none !important;
+    }
+}
