@@ -71,6 +71,7 @@
 
     <link rel="stylesheet" href="css/app.bootstrap.css">
     <link rel="stylesheet" href="sources/animate/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
     <!-- font-ali-awesome -->
     <link rel="stylesheet" href="sources/font-ali-awesome/font-ali-awesome.css">
@@ -86,14 +87,14 @@
 </head>
 <!-- body class: navbar-fixed -->
 
-<body>
+<body class="navside-fixed">
     <div class="wrapper">
         <!-- HEADER -->
         <header class="main-header">
             <a href="#" class="logo">
                 <!-- <button class="btn-link sidebar-toggle hidden-xs hidden-sm" data-toggle="push-menu" role="button">
-                        <span class="icon-ic-menu-24px"></span>
-                    </button> -->
+                                <span class="icon-ic-menu-24px"></span>
+                            </button> -->
                 <!-- mini logo for sidebar mini 50x50 pixels -->
                 <!-- <span class="logo-mini"><b>A</b>LR</span> -->
 
@@ -114,9 +115,6 @@
                         <a>
                             <span class="icon-icon_home"></span> Dashboard</a>
                     </li>
-                    <li>
-                        <a href="#" class="current-active">Upgrade Version</a>
-                    </li>
                 </ul>
 
 
@@ -124,7 +122,6 @@
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
                         <!-- Button -->
-                        <!-- Messages: style can be found in-->
                         <li class="hidden visible-lg-block wrap-unlimited">
                             <button href="#" class="btn btn-primary fw600">
                                 You’re using
@@ -132,6 +129,7 @@
                                 <span class="color-pink">UNLIMITED</span>
                             </button>
                         </li>
+                        <!-- Messages: style can be found in-->
 
                         <li class="dropdown dropdown-header-menu tasks-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -192,8 +190,8 @@
                             </div>
                         </li>
                         <!-- Divide -->
-                        <li class="dropdown tasks-menu">
-                            <a href="javascript:void(0)" class="dropdown-divide"></a>
+                        <li class="dropdown-divide">
+                            <a href="javascript:void(0)"></a>
                         </li>
                         <!-- User Account: style can be found in -->
                         <li class="dropdown user user-menu">
@@ -282,7 +280,7 @@
                         <a href="getting-started-page.html" class="ico-get-star">Get starts</a>
                     </li>
 
-                    <li class="active">
+                    <li>
                         <a href="upgrade-version-page.html" class="ico-upgrade-version">Upgrade version</a>
                     </li>
                     <li class="hidden-sm hidden-md hidden-lg divide"></li>
@@ -297,82 +295,293 @@
         <!-- CONTENT WRAPPER -->
         <div class="wrapper-content">
             <div class="clearfix"></div>
-            <div class="wrapper-space wrapper-space--45 bg-white upgrade-version-page">
-                <h2 class="mar-t-0 fz25 fw-bold color-dark-blue mar-b-15">Upgrade Your App with a Unlimited Plan</h2>
-                <p class="fz15 color-dark-blue mar-b-50">7 Day Money Back Guarantee on Upgrade Unlimited Plans. By clicking this button, you agree with our
-                    <b>“Terms & Policies”</b>
-                </p>
+            <div class="wrapper-space dashboard-page">
+                <div class="wrapper-tbl-action">
+                    <div class="btn-group action-group pull-right">
+                        <button type="button" class="btn btn-primary fw600 fz12 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            + Add More Widgets
+                        </button>
 
-                <div class="row mar-b-25">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="wrapper-price selected">
-                            <img src="images/prices/free.svg" alt="Domain.com">
-                            <div class="wrapper-price__content">
-                                <ul class="list-unstyled text-center fz15 color-dark-blue">
-                                    <li>Write review manually</li>
-                                    <li>Display review properties</li>
-                                    <li>Verified reviews icon</li>
-                                    <li>Manage reviews</li>
-                                </ul>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">New Reviews</a>
+                            </li>
+                            <li>
+                                <a href="#">Reviews Imported</a>
+                            </li>
+                            <li>
+                                <a href="#">Product Imported</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
 
-                                <div class="text-center" style="margin-top: 50px;">
-                                    <a href="#" class="btn btn-primary fw-bold  w-130px fz13">YOU ARE HERE</a>
-                                </div>
+                <div class="mar-b-25">
+                    <img src="images/dashboard/bner-full.svg" class="w-100" alt="">
+                </div>
 
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-link btn-link--primary mar-t-10">Find out more</a>
+                <div class="row flex-equal">
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item">
+                            <div class="media-left media-middle media-top">
+                                <span class="fz35 fw700 no-wrap dashboard-list-item__number">+45</span>
+                            </div>
+
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">New reviews are watiting</a>
+                                </h4>
+                                <p class="fz13 mr0">new reviews / all</p>
+
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+                        <!-- END: Media Object Point -->
                     </div>
 
-                    <div class="col-md-4 col-sm-6">
-                        <div class="wrapper-price">
-                            <img src="images/prices/pro.svg" alt="Domain.com">
-                            <div class="wrapper-price__content">
-                                <ul class="list-unstyled text-center fz15 color-dark-blue">
-                                    <li>Write review manually</li>
-                                    <li>Display review properties</li>
-                                    <li>Verified reviews icon</li>
-                                    <li>Manage reviews</li>
-                                    <li>Remove branded logo</li>
-                                    <li>Create review showcase page</li>
-                                </ul>
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item">
+                            <div class="media-left media-middle media-top">
+                                <span class="fz35 fw700 no-wrap dashboard-list-item__number">+45</span>
+                            </div>
 
-                                <div class="text-center" style="margin-top: 50px;">
-                                    <a href="#" class="btn btn-primary fw-bold fz13 w-130px">FREE TRIAL</a>
-                                </div>
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">Total products get reviews</a>
+                                </h4>
+                                <p class="fz13 mr0">this month / all time</p>
 
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-link btn-link--primary mar-t-10">Find out more</a>
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+                        <!-- END: Media Object Point -->
                     </div>
 
-                    <div class="col-md-4 col-sm-6">
-                        <div class="wrapper-price">
-                            <img src="images/prices/untimated.svg" alt="Domain.com">
-                            <div class="wrapper-price__content">
-                                <ul class="list-unstyled text-center fz15 color-dark-blue">
-                                    <li>Write review manually</li>
-                                    <li>Display review properties</li>
-                                    <li>Verified reviews icon</li>
-                                    <li>Manage reviews</li>
-                                    <li>Remove branded logo</li>
-                                    <li>Create review showcase page</li>
-                                    <li>Do everything you want!</li>
-                                </ul>
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item">
+                            <div class="media-left media-middle media-top">
+                                <span class="fz35 fw700 no-wrap dashboard-list-item__number">+45</span>
+                            </div>
 
-                                <div class="text-center" style="margin-top: 50px;">
-                                    <a href="#" class="btn btn-primary fw-bold fz13 w-130px">FREE TRIAL</a>
-                                </div>
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">Total imported reviews</a>
+                                </h4>
+                                <p class="fz13 mr0">this month / all time</p>
 
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-link btn-link--primary mar-t-10">Find out more</a>
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+                        <!-- END: Media Object Point -->
+                    </div>
+                </div>
+
+                <div class="row flex-equal">
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item">
+                            <div class="media-left media-middle media-top">
+                                <span class="icon-ic-important-devices-24px media-left__icon"></span>
+                            </div>
+
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">New Update Release</a>
+                                </h4>
+                                <p class="fz13 mr0">New update release: Ali Reviews 3.2.2</p>
+
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Media Object Point -->
+                    </div>
+
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item">
+                            <div class="media-left media-middle media-top">
+                                <span class="icon-ic-star-24px media-left__icon"></span>
+                            </div>
+
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">Vote for us</a>
+                                </h4>
+                                <p class="fz13 mr0">Evaluate your</p>
+
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Media Object Point -->
+                    </div>
+
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item">
+                            <div class="media-left media-middle media-top">
+                                <span class="icon-ic-group-add-24px media-left__icon"></span>
+                            </div>
+
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">Invite your friend</a>
+                                </h4>
+                                <p class="fz13 mr0">Share apps to your friend / facebook</p>
+
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Media Object Point -->
+                    </div>
+                </div>
+
+                <div class="row flex-equal">
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item dashboard-list-item--img bg-item-1">
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">Blog new - Tips of day</a>
+                                </h4>
+                                <p class="fz13 mr0">How to make you sale increasing</p>
+
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Media Object Point -->
+                    </div>
+
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item dashboard-list-item--img bg-item-2">
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">Vote for us</a>
+                                </h4>
+                                <p class="fz13 mr0">Evaluate your</p>
+
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Media Object Point -->
+                    </div>
+
+                    <div class="col-md-4">
+                        <!-- Media Object Point -->
+                        <div class="media media--point bg-white dashboard-list-item dashboard-list-item--img bg-item-3">
+                            <div class="media-body media-body--icon">
+                                <h4 class="media-heading fz18 fw-bold color-dark-blue">
+                                    <a href="#">Invite your friend</a>
+                                </h4>
+                                <p class="fz13 mr0">Share apps to your friend / facebook</p>
+
+                                <div class="action-group pull-right">
+                                    <button type="button" class="btn btn-link btn-link--primary undecoration fw600 fz12 dropdown-toggle" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <span class="icon-ic-more-horiz-24px"></span>
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="#">Remove</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Media Object Point -->
                     </div>
                 </div>
             </div>
@@ -387,18 +596,7 @@
     <script src="sources/animate/wow.min.js"></script>
 
     <!-- ============================= SCRIPT PAGE ============================= -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var heights = $(".wrapper-price__content ul").map(function () {
-                return $(this).height();
-            }).get();
 
-            var maxHeight = Math.max.apply(null, heights);
-            console.log(maxHeight);
-
-            $(".wrapper-price__content ul").css('min-height', maxHeight);
-        }); 
-    </script>
     <!-- =========================== END: SCRIPT PAGE ========================== -->
 
     <script type="text/javascript" src="js/scripts.js"></script>

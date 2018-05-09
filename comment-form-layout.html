@@ -313,10 +313,10 @@
             <div class="clearfix"></div>
             <div class="wrapper-space wrapper-space--45 bg-white dashboard-general-setting-page">
                 <h2 class="ali-title-normal mar-t-0 mar-b-10 color-dark-blue">Comment form layout</h2>
-                <p class="ali-body-medium mar-b-55">Translate these original strings below into your own language, which will overwrite the source text displaying
+                <p class="ali-body-medium mar-b-30">Translate these original strings below into your own language, which will overwrite the source text displaying
                     in the Review section.</p>
                 <h3 class="color-dark-blue fz18 fw-bold mar-t-0 mar-b-15">1. Active review form edit</h3>
-                <div class="mar-b-40">
+                <div class="mar-b-30">
                     <label class="wrap-switch-text">
                         <label class="wrap-switch">
                             <input type="checkbox" class="switch-input" checked="checked">
@@ -328,7 +328,7 @@
                 <hr class="mar-b-35">
                 <div class="row mar-b-60">
                     <div class="col-lg-6">
-                        <h3 class="color-dark-blue fz18 fw-bold mar-t-0 mar-b-15 mar-b-50">2. Display options</h3>
+                        <h3 class="color-dark-blue fz18 fw-bold mar-t-0 mar-b-15 mar-b-35">2. Display options</h3>
                         <h4 class="fz15 color-dark-blue fw-bold mar-b-20">Display information</h4>
                         <div class="row">
                             <div class="col-md-6">
@@ -410,7 +410,7 @@
                         <hr class="mar-b-30">
                         <div class="row mar-b-30">
                             <div class="col-lg-2 col-md-4 col-sm-2">
-                                <label>Themes</label>
+                                <label class="pad-t-7">Themes</label>
                             </div>
                             <div class="col-lg-10 col-md-8 col-sm-10">
                                 <select name="" class="form-control fw600">
@@ -424,7 +424,7 @@
                             <div class="col-lg-6 col-md-12 mar-b-30-lg">
                                 <div class="row">
                                     <div class="col-md-4 col-sm-2">
-                                        <label>Text Color</label>
+                                        <label class="pad-t-7">Text Color</label>
                                     </div>
                                     <div class="col-md-8 col-sm-10">
                                         <div class="input-group colorpicker-init bd-0">
@@ -441,7 +441,7 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="row">
                                     <div class="col-md-4 col-sm-2">
-                                        <label>Verify Icon</label>
+                                        <label class="pad-t-7">Verify Icon</label>
                                     </div>
                                     <div class="col-md-8 col-sm-10">
                                         <div class="input-group colorpicker-init bd-0">
@@ -460,13 +460,33 @@
                             <div class="col-lg-8 col-md-12 col-md-8 mar-b-15-lg">
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-12">
-                                        <label>Star Style</label>
+                                        <label class="pad-t-7">Star Style</label>
                                     </div>
                                     <div class="col-lg-9 col-sm-12">
-                                        <select name="" class="form-control fw600 color-dark-blue">
-                                            <option value=""> Style 1</option>
-                                            <option value=""> Style 2</option>
-                                        </select>
+                                        <div class="dropdown">
+                                            <button class="btn btn-default dropdown-toggle dropdown--caret dropdown--demo w-100" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                                <span class="dropdown--demo__show">
+                                                    <img src="http://via.placeholder.com/22x22" alt="" class="mar-r-15">
+                                                    <span class="fw600 color-dark-blue">Style 1</span>
+                                            </button>
+
+                                            <div class="dropdown-menu dropdown-menu--rdb dropdown-menu--single w-100" aria-labelledby="dropdownMenu1">
+                                                <label>
+                                                    <input type="radio" name="rdb-single">
+                                                    <img src="http://via.placeholder.com/22x22" alt=""> Style 1
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb-single">
+                                                    <img src="http://via.placeholder.com/22x22" alt=""> Style 2
+                                                </label>
+
+                                                <label>
+                                                    <input type="radio" name="rdb-single">
+                                                    <img src="http://via.placeholder.com/22x22" alt=""> Style 3
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -487,7 +507,7 @@
                             <div class="col-lg-8 col-md-12 mar-b-15-lg">
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-12">
-                                        <label>Date Style</label>
+                                        <label class="pad-t-7">Date Style</label>
                                     </div>
 
                                     <div class="col-lg-9 col-sm-12">
@@ -519,7 +539,7 @@
                             <div class="col-lg-8 col-md-12 mar-b-15-lg">
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-12">
-                                        <label>Background Color </label>
+                                        <label class="pad-t-7">Background Color </label>
                                     </div>
                                     <div class="col-lg-9 col-sm-12">
                                         <div class="input-group colorpicker-init bd-0">
@@ -548,7 +568,7 @@
 
                     <div class="col-lg-6">
                         <div class="wrapper-preview-real bg-dark-blue">
-                            <div class="preview-real__header mar-b-30">
+                            <div class="preview-real__header mar-b-15">
                                 <button class="btn btn-default btn-hvr-pink mar-r-10">
                                     <span class="icon-ic-brightness-6-24px"></span>
                                 </button>
@@ -570,7 +590,7 @@
                                 <!-- Media Object Point -->
                                 <div class="media media--point">
                                     <div class="media-left media-top">
-                                        <button class="btn btn-primary fw-bold">4.5</button>
+                                        <button class="btn btn-primary fw600 fz25">4.5</button>
                                     </div>
 
                                     <div class="media-body media-body--write-new">

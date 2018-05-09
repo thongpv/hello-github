@@ -214,9 +214,43 @@ body {
   backface-visibility: hidden;
 }
 
+/* LAYOUT - styles */
+body.navside-fixed aside.main-sidebar ul.sidebar-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin-top: 70px;
+  padding-top: 5px;
+  overflow-y: auto;
+  width: 260px;
+  padding-bottom: 35px;
+  transition: 0.3s;
+}
+
+body.navside-fixed header.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+body.navside-fixed .wrapper-content {
+  padding-top: 70px;
+}
+
+@media only screen and (max-width: 992px) {
+  body.navside-fixed aside.main-sidebar ul.sidebar-menu {
+    margin-top: 140px;
+  }
+  body.navside-fixed .wrapper-content {
+    padding-top: 140px;
+  }
+}
+
 /* PAGES - styles */
-/* PAGES - Contact */
-/* PAGES - Home */
+.create-reviews-page {
+  padding-bottom: 270px !important;
+}
+
 .create-reviews-page ._btn-add-page {
   height: 40px;
   padding-left: 20px;
@@ -324,6 +358,7 @@ body {
 
 .ali-modal .modal-header .close {
   opacity: 1;
+  outline: none !important;
 }
 
 .ali-modal .modal-header .close:hover {
@@ -354,10 +389,6 @@ body {
 
 .ali-modal--style-get-review .select2-selection__rendered {
   font-weight: 600;
-}
-
-.ali-modal--style-edit-review .ali-rating {
-  font-size: 13px !important;
 }
 
 .product-reviews-page .wrapper-tbl-action ._btn-back {
@@ -416,10 +447,6 @@ body {
   color: #3b86ff;
 }
 
-.product-reviews-page .media--point .media-body--write-new button {
-  transform: translate(0, -40%);
-}
-
 .product-reviews-page .input-group--search input[type="text"] {
   font-size: 14px;
 }
@@ -438,6 +465,40 @@ body {
 
 .upgrade-version-page .wrapper-price a.btn {
   padding: 9px 0px;
+}
+
+.dashboard-page .bg-item-1 {
+  background-image: url("../images/dashboard/list-img-1.png");
+}
+
+.dashboard-page .bg-item-2 {
+  background-image: url("../images/dashboard/list-img-2.png");
+}
+
+.dashboard-page .bg-item-3 {
+  background-image: url("../images/dashboard/list-img-3.png");
+}
+
+.dashboard-page .dashboard-list-item--img {
+  background-size: 100% 100%;
+}
+
+.dashboard-page .dashboard-list-item--img a,
+.dashboard-page .dashboard-list-item--img p,
+.dashboard-page .dashboard-list-item--img button {
+  color: #fff;
+}
+
+.dashboard-page .dashboard-list-item--img .dropdown-menu a {
+  color: #262626;
+}
+
+.dashboard-page .dashboard-list-item--img button:focus, .dashboard-page .dashboard-list-item--img button:hover {
+  color: #f63665;
+}
+
+.dashboard-page .dashboard-list-item--img:hover {
+  box-shadow: 3px 3px 5px #888888;
 }
 
 /* LAYOUTS - Component */
@@ -1644,7 +1705,7 @@ header.main-header .navbar .user .dropdown-menu {
   border: none;
 }
 
-header.main-header .navbar .dropdown-divide {
+header.main-header .navbar .dropdown-divide a {
   height: 70px;
   position: relative;
   background-color: transparent;
@@ -1652,7 +1713,7 @@ header.main-header .navbar .dropdown-divide {
   padding-left: 5px;
 }
 
-header.main-header .navbar .dropdown-divide:after {
+header.main-header .navbar .dropdown-divide a:after {
   content: "";
   position: absolute;
   width: 1px;
@@ -1720,6 +1781,7 @@ header.main-header .nav.navigation li:last-child:after {
 }
 
 header.main-header .nav.navigation li a {
+  background-color: transparent;
   padding: 15px 5px;
   color: #242539;
 }
@@ -1734,6 +1796,10 @@ header.main-header .nav.navigation li a [class^="icon-"] {
 
 header.main-header .nav.navigation li a [class^="icon-"]:before {
   color: #242539;
+}
+
+header.main-header .nav.navigation li a[href]:hover {
+  text-decoration: underline;
 }
 
 header.main-header .dropdown-menu {
@@ -1768,6 +1834,10 @@ header.main-header .navbar-custom-menu {
 
 header.main-header .navbar-custom-menu .user .dropdown-menu::after, header.main-header .navbar-custom-menu .user .dropdown-menu::before {
   right: 30px;
+}
+
+header.main-header .navbar-custom-menu .dropdown-toggle:focus {
+  background: transparent;
 }
 
 header.main-header .dropdown-header-menu .dropdown-menu {
@@ -1865,7 +1935,22 @@ header.main-header .wrap-unlimited button {
 }
 
 header.main-header .wrap-unlimited button:hover span, header.main-header .wrap-unlimited button:focus span {
-  color: #9a364e !important;
+  color: #242539 !important;
+}
+
+header.main-header .navbar-custom-menu .dropdown:hover {
+  background-color: #eeeeee;
+}
+
+header.main-header .navbar-custom-menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper-tbl-action button {
+    margin-bottom: 5px;
+    margin-right: 5px !important;
+  }
 }
 
 aside.main-sidebar {
@@ -2065,8 +2150,9 @@ aside.main-sidebar a.ico-logout:before {
 }
 
 .wrapper-content {
+  overflow: hidden;
   padding-left: 260px;
-  background-color: #F0F0F7;
+  background-color: #f0f0f7;
   min-height: 960px;
   height: 100%;
   width: 100%;
@@ -2162,6 +2248,9 @@ aside.main-sidebar a.ico-logout:before {
     width: 100%;
     margin-top: 15px;
   }
+  .dashboard-page .dashboard-list-item {
+    margin-bottom: 15px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2254,6 +2343,9 @@ aside.main-sidebar a.ico-logout:before {
   .ali-modal--style-get-review .modal-footer button {
     width: 100px !important;
   }
+  .media--point .media-body--icon button {
+    padding: 6px 12px;
+  }
 }
 
 @media only screen and (min-width: 544px) {
@@ -2263,28 +2355,12 @@ aside.main-sidebar a.ico-logout:before {
 }
 
 @media only screen and (min-width: 992px) {
-  .open-menu--push aside.main-sidebar {
-    width: 53px;
+  .flex-equal {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: stretch;
   }
-  .open-menu--push aside.main-sidebar a {
-    height: 60px;
-    color: #242639 !important;
-    transition: 0 !important;
-  }
-  .open-menu--push aside.main-sidebar a:before {
-    color: #fff !important;
-  }
-  .open-menu--push aside.main-sidebar a:after {
-    color: #242639 !important;
-  }
-  .open-menu--push aside.main-sidebar div.panel-body {
-    padding-left: 0;
-  }
-  .open-menu--push aside.main-sidebar li.header,
-  .open-menu--push aside.main-sidebar li.divide {
-    display: none;
-  }
-  .open-menu--push .wrapper-content {
-    padding-left: 55px !important;
+  .flex-equal > div {
+    display: flex;
   }
 }
