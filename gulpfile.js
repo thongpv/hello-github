@@ -34,24 +34,9 @@ gulp.task('watch', ['sass'], function () {
 });
 
 gulp.task('compress', function() {
-  gulp.src('js/**')
-    .pipe(minify({
-        exclude: ['tasks'],
-        ignoreFiles: ['-min.js']
-    }))
-    .pipe(gulp.dest('dist/js'));
-
   gulp.src('css/**')
     .pipe(minifyCss({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist/css'));
-
-  gulp.src('images/**')
-    .pipe(imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        use: [pngquant()]
-    }))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('css'));
 });
 
 gulp.task('default', ['serve']);
