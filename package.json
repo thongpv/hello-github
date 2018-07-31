@@ -1,0 +1,25 @@
+{
+  "name": "alireviews-ui-kit",
+  "version": "1.0.1",
+  "description": "\"# bootstrap3\"",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thongpv"
+  },
+  "author": "Pham Thong",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.2.1",
+    "imagemin-pngquant": "^5.1.0"
+  }
+}

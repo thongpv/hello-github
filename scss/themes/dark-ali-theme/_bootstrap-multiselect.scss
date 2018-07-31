@@ -1,0 +1,67 @@
+.multiselect-native-select {
+	.btn-group {
+		width: 100%;
+
+		.multiselect {
+			width: 100%;
+			text-align: left;
+		}
+
+		ul.multiselect-container {
+			width: 100%;
+
+			li {
+				padding: 0 10px;
+
+				label {
+					font-weight: 500;
+				}
+			}
+		}
+
+		.multiselect-selected-text {
+			display: inline-block;
+			width: 100%;
+		}
+
+		b.caret {
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.bootstrap-multi-advance {
+	+ div {
+		.input-group {
+			button,
+			.input-group-addon,
+			input[type="text"] {
+				min-height: 35px;
+				height: 35px;
+			}
+		}
+
+		.input-group-addon, .input-group-btn button {
+			border-color: $border-solid-color;
+			position: relative;
+
+			&:after {
+				content: "\e946";
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			    transform: translate(-50%, -50%);
+		        font-size: 12px;
+			    @include font-icomoon();
+			}
+		}
+
+		.input-group-btn button:after {
+			content: "\ec20";
+		}
+
+	}
+}

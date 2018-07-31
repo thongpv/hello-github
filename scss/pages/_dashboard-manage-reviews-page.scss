@@ -1,0 +1,36 @@
+.dashboard-manage-reviews-page {
+    .wrapper-tbl-action {
+        .input-group--search {
+            max-width: 280px;
+
+            button {
+                height: 35px;
+                line-height: 25px;
+            }
+        }
+
+        button.wid130 {
+            width: 130px !important;
+        }
+    }
+
+    .table-ali-custom {
+        thead > tr > th {
+            color: $dark-blue;
+        }
+
+        .media-body {
+            vertical-align: middle;
+
+            a {
+                color: #3b86ff;
+            }
+        }
+    }
+
+    .input-group--search {
+        input[type="text"] {
+            font-size: 14px;
+        }
+    }
+}

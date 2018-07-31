@@ -1,0 +1,32 @@
+.wrapper-content {
+    overflow: hidden;
+    padding-left: 260px;
+    background-color: #f0f0f7;
+    min-height: 960px;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 75px;
+    @include transition(0.3s ease-in-out, width 0.3s ease-in-out);
+
+    .wrapper-space {
+        margin-left: 75px;
+        margin-right: 75px;
+        margin-top: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 1200px;
+
+        &--45 {
+            padding: 45px 75px;
+        }
+
+        &.bg-white {
+            box-shadow: 1px 1px 3px #dadada;
+        }
+
+        &__45 {
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+    }
+}

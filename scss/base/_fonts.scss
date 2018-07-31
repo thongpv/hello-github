@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'NotoSansRegular';
+    src: url('../fonts/NotoSansRegular/NotoSansRegular.eot');
+    src: url('../fonts/NotoSansRegular/NotoSansRegular.eot') format('embedded-opentype'),
+         url('../fonts/NotoSansRegular/NotoSansRegular.woff2') format('woff2'),
+         url('../fonts/NotoSansRegular/NotoSansRegular.woff') format('woff'),
+         url('../fonts/NotoSansRegular/NotoSansRegular.ttf') format('truetype'),
+         url('../fonts/NotoSansRegular/NotoSansRegular.svg#NotoSansRegular') format('svg');
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}

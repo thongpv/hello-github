@@ -1,0 +1,38 @@
+.dashboard-page {
+    .bg-item-1 {
+        background-image: url("../images/dashboard/list-img-1.png");
+    }
+
+    .bg-item-2 {
+        background-image: url("../images/dashboard/list-img-2.png");
+    }
+
+    .bg-item-3 {
+        background-image: url("../images/dashboard/list-img-3.png");
+    }
+
+    .dashboard-list-item--img {
+        background-size: 100% 100%;
+
+        a,
+        p,
+        button {
+            color: #fff;
+        }
+
+        .dropdown-menu a {
+            color: #262626;
+        }
+
+        button {
+            &:focus,
+            &:hover {
+                color: #f63665;
+            }
+        }
+
+        &:hover {
+            box-shadow: 3px 3px 5px #888888;
+        }
+    }
+}

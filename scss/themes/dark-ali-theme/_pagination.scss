@@ -1,0 +1,33 @@
+nav .ali-pagination {
+	margin-right: -5px;
+	margin-left: -5px;
+	
+	a {
+		margin: 5px;
+		padding: 7px 13px;
+		border-radius: 4px;
+		color: #4D4F5C;
+		border: solid 1px $border-solid-color;
+	}
+
+	li.active a {
+		background-color: $bg-pagination-active;
+		color: $color-pagination-active;
+		
+		&:hover {
+			background-color: $bg-pagination-hvr-active;
+		}
+		 
+		&:focus {
+			background-color: $bg-pagination-active;
+		}
+	}
+
+	li.disabled span:before {
+	    color: #d8d8d8;
+	}
+
+	li a:hover {
+		color: $blue;
+	}
+}

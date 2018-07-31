@@ -1,0 +1,142 @@
+.table-responsive {
+    overflow: inherit;
+}
+
+.wrapper-tbl-action {
+    padding-bottom: 25px;
+
+    .action-group {
+        margin-left: 15px;
+
+        &--fz12 {
+            button,
+            a {
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.table-ali-custom {
+    border: solid 1px #d7dae2;
+    background-color: #fff;
+
+    &.table-mid td {
+        vertical-align: middle;
+    }
+
+    thead > tr > th {
+        border: none;
+        padding: 8px !important;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    &.table-head-light thead > tr > th {
+        font-weight: 500 !important;
+    }
+
+    thead > tr > th ,
+    tr td {
+        padding: 8px !important;
+    }
+
+    tr {
+        border-top: solid 1px #d7dae2;
+        transition: $time-transition / 2;
+
+        td {
+            border-top: none !important;
+
+            p.table-note {
+                max-width: 250px;
+            }
+
+            label.wrap-custom-box {
+                margin-bottom: 0;
+
+                // [class^="checkmark-"] {
+                //     left: 50%;
+                //     transform: translate(-50%, -50%);
+                // }
+            }
+
+            button {
+                margin: 0;
+            }
+        }
+    }
+
+    tr.row-selected {
+        box-shadow: inset 0px 0px 0px 1px $purple, inset 5px 0px 0px 1px #f63665;
+        border-top: solid 1px $purple;
+    }
+
+    tr.row-selected + tr.row-selected {
+        border-top: solid 1px #fff;
+    }
+}
+
+.table > tbody > tr > td:first-child,
+.table > thead > tr:first-child > th:first-child {
+    padding-left: 25px !important;
+}
+
+.table > tbody > tr > td:last-child,
+.table > thead > tr:first-child > th:last-child {
+    padding-right: 25px !important;
+}
+
+.table-ali-custom {
+    p.table-note {
+        max-width: 250px;
+    }
+
+    label.wrap-custom-box {
+        margin-bottom: 0;
+        // transform: translateY(50%);
+
+        [class^="checkmark-"] {
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+        }
+    }
+
+    button {
+        margin: 0;
+    }
+}
+
+// Rating
+.table-ali-custom {
+    .td-rating {
+        white-space: nowrap;
+    }
+
+    .ali-rating {
+        font-size: 16px !important;
+    }
+}
+
+// more-photos
+.table-ali-custom {
+    .more-photos {
+        padding: 0 7px;
+        font-size: 15px;
+    }
+}
+
+// Dropdown button
+.table-ali-custom .dropdown-menu--rdb {
+    top: -2px;
+    min-width: 147px;
+
+    label {
+        margin: 0 1px;
+
+        &:nth-child(7n + 0) {
+            clear: inherit;
+        }
+    }
+}

@@ -2,11 +2,18 @@ $(document).ready(function() {
 	// INIT
 	backToTop();
 	new WOW().init();
+	toolTipBootstrap();
 
 	// FUNCTION
 	toggleMenuMobile();
 	tableAliCustom();
+	turnOffBlindMenu();
 });
+
+function toolTipBootstrap() {
+	$('[data-toggle="tooltip"]').tooltip(); 
+	$('[data-tooltip="tooltip"]').tooltip(); 
+}
 
 function backToTop() {
 	if ($('#back_to_top').length) {
@@ -76,10 +83,16 @@ function getFlagsSelect2(el_ID) {
 }
 
 function setCurrency (currency) {
-	console.log(currency);
     if (!currency.id) { return currency.text; }
     var $currency = $('<span class="ali-flag-slc ' + currency.element.value + '">' + currency.text + '</span>');
     return $currency;
 };
 
 // END: Select2 render flag
+
+function turnOffBlindMenu() {
+	$('.wrapper-content').on('click', function() {
+		console.log(1);
+		$('.open-menu--push').removeClass('open-menu--push open-menu');
+	})
+}
